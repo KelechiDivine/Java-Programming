@@ -28,12 +28,15 @@ public class DiameterCircumferenceAndAreaOfACircle {
 		System.out.print("Enter radius of a circle: ");
 		radius = userInput.nextInt();
 		
-		double diameter = 2 * radius;
+//		double diameter = 2 * radius;
+//
+//		double area = 3.14159 * (radius ^ 2);
+//
+//		double circumference = 2 * 3.14159 * radius;
 		
-		double area = 3.14159 * (radius ^ 2);
 		
-		double circumference = 2 * 3.14159 * radius;
-		
+		System.out.printf("Diameter = %d\nCircumference = %.2f\nArea = %.2f\n",
+				2 * radius, 2 * Math.PI * radius, Math.PI * radius * radius);
 		
 		
 	}
