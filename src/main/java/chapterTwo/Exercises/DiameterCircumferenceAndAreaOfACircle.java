@@ -23,16 +23,11 @@ public class DiameterCircumferenceAndAreaOfACircle {
 		Scanner userInput = new Scanner(System.in);
 		
 		int radius;
-//		int secondInteger;
 		
 		System.out.print("Enter radius of a circle: ");
 		radius = userInput.nextInt();
 		
-//		double diameter = 2 * radius;
-//
-//		double area = 3.14159 * (radius ^ 2);
-//
-//		double circumference = 2 * 3.14159 * radius;
+
 		
 		
 		System.out.printf("Diameter = %d\nCircumference = %.2f\nArea = %.2f\n",

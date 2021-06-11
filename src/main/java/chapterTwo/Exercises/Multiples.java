@@ -25,23 +25,17 @@ public class Multiples {
 		
 		
 		if (secondInteger % firstInteger == 0)
-			System.out.printf("first number is a multiple of the second number: %d%n\n", firstInteger );
+			System.out.printf("First number is a multiple of the second number: %d%n\n", firstInteger );
 		
-		//Really don't know why this line of code is here.. That's why i gave a message null..
+		// if first number if greater than second number
+		
 		
 		if (firstInteger % secondInteger == 1)
 			System.out.print("null");
 		
 		if (secondInteger % firstInteger == 1)
-			System.out.printf("first number is not multiple of the second number: %d%n\n", firstInteger );
+			System.out.printf("First number is not multiple of the second number: %d%n\n", firstInteger );
 		
-		
-		
-//		if (firstInteger % secondInteger == 3)
-//			System.out.printf("First number is not the multiple of the second number: %d%n", firstInteger);
-//
-//
-//
 		
 	}
 }
