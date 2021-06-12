@@ -34,4 +34,8 @@ public class GasMileage {
 		return miles  / (double) gallons;
 		
 	}
+	
+	public int getTotalMPG(){
+		return totalGalloneUsed /getTotalMilesDriven();
+	}
 }
