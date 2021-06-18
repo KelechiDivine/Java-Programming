@@ -2,7 +2,7 @@ package chapterTwo.Exercises;
 
 import java.util.Scanner;
 
-public class ArithmeticScannerClass {
+public class ArithmeticDriverClass {
 	
 	public static void main(String[] args){
 		
