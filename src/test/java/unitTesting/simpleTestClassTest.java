@@ -28,6 +28,6 @@ class simpleTestClassTest {
 		int secondNumberToDivide= 2;
 		
 		simpleTestClass.divide(firstNumberToDivide, secondNumberToDivide);
-		assertEquals(3, simpleTestClass.getDivision());
+		assertEquals(2, simpleTestClass.getDivision());
 	}
 }
