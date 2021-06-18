@@ -51,7 +51,7 @@ class ArithmeticSmallestAndLargestTest {
 		int thirdNumber= 1;
 		
 		arithmeticSmallestAndLargest.average(firstNumber, secondNumber, thirdNumber);
-		System.out.println("Test passed.");
+//		System.out.println("Test passed.");
 		Assertions.assertEquals(3, arithmeticSmallestAndLargest.getAverage(), "Average not found");
 	}
 
