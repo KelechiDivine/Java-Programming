@@ -1,76 +1,58 @@
 package chapterTwo.Exercises;
 
-import java.util.Scanner;
-
 public class LargestAndSmallestIntegers {
 	
-	public static void main (String[] args){
+	int largestNumber= Integer.MIN_VALUE;
+	int smallestNumber = Integer.MAX_VALUE;
+	int equalNumbers = Integer.compare(smallestNumber, largestNumber);
 	
+	public void largestNumberMethod(int number1, int number2, int number3, int number4, int number5) {
+		
+		
+		if (number1 > largestNumber)
+			largestNumber = number1;
+		
+		if (number2 > largestNumber)
+			largestNumber = number2;
+		
+		if (number3 > largestNumber)
+			largestNumber = number3;
+		
+		if (number4 > largestNumber)
+			largestNumber = number4;
+		
+		if (number5 > largestNumber)
+			largestNumber = number5;
+		
+		
+		
+	}
 	
-//		Write an application that reads five integers and determines
-//		and prints the largest and smallest integers in the group. Use only the programming techniques you
-//		learned in this chapter.
+	public int getTheLargestNumber() {
+		return largestNumber;
+	}
 	
+	public void smallestNumberMethod(int number1, int number2, int number3, int number4, int number5) {
 		
-		Scanner userInput = new Scanner(System.in);
+		if (number1 < smallestNumber)
+			smallestNumber = number1;
 		
-		int firstNumber;
-		int secondNumber;
-		int thirdNumber;
-		int fourthNumber;
-		int fifthNumber;
+		if (number2 < smallestNumber)
+			smallestNumber = number2;
+		
+		if (number3 < smallestNumber)
+			smallestNumber = number3;
+		
+		if (number4 < smallestNumber)
+			smallestNumber = number4;
+		
+		if (number5 < smallestNumber)
+			smallestNumber = number5;
 		
 		
-		System.out.print("Enter first number: ");
-		firstNumber = userInput.nextInt();
-		
-		System.out.print("Enter second number: ");
-		secondNumber = userInput.nextInt();
-		
-		System.out.print("Enter third number: ");
-		thirdNumber = userInput.nextInt();
-		
-		System.out.print("Enter fourth number: ");
-		fourthNumber = userInput.nextInt();
-		
-		System.out.print("Enter the fifth number: ");
-		fifthNumber = userInput.nextInt();
-		
-		int minimum = firstNumber;
-		
-//		Checking for largest number
-		
-		if (secondNumber < minimum)
-			minimum = secondNumber;
-			System.out.printf("Second number is the smallest: %d%n\n", minimum);
-
-		if (thirdNumber < secondNumber)
-			secondNumber = thirdNumber;
-			System.out.printf("Third number is the smallest: %d%n\n", secondNumber);
-//
-//		if (fourthNumber < minimum)
-//			System.out.printf("Fourth number is the smallest: %d%n\n", fourthNumber);
-//
-//		if (fifthNumber < minimum)
-//			System.out.printf("Fifth number is the smallest: %d%n\n", fifthNumber);
-//
-////		if ()
-////			System.out.printf("Fifth number is highest: %d%n", fifthNumber);
-//
-//		int maximumNumber = firstNumber;
-//
-//		if (secondNumber > maximumNumber)
-//			System.out.printf("Second number is the highest: %d%n", secondNumber);
-//
-//		if (thirdNumber > maximumNumber)
-//			System.out.printf("Third number is the highest: %d%n", thirdNumber);
-//
-//		if (fourthNumber > maximumNumber)
-//			System.out.printf("Second number is the highest: %d%n", secondNumber);
-//		if (secondNumber > maximumNumber)
-//			System.out.printf("Second number is the highest: %d%n", secondNumber);
-//		if (secondNumber > maximumNumber)
-//			System.out.printf("Second number is the highest: %d%n", secondNumber);
-//
+	}
+	
+	public int getSmallestNumber() {
+		return smallestNumber	;
 	}
 }

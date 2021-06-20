@@ -20,7 +20,7 @@ class ArithmeticTest {
 		int secondNumber= 3;
 		
 		arithmetic.sum(firstNumber, secondNumber);
-		assertEquals(5, arithmetic.getSum());
+		assertEquals(5, arithmetic.getSum(), "sum not found.");
 		
 	}
 	
@@ -33,7 +33,7 @@ class ArithmeticTest {
 		int secondNumber= 2;
 		
 		arithmetic.division(firstNumber, secondNumber);
-		assertEquals(2, arithmetic.getDivision());
+		assertEquals(2, arithmetic.getDivision(), "number division is null.");
 	}
 	
 	@Test
@@ -45,7 +45,7 @@ class ArithmeticTest {
 		int secondNumber= 3;
 		
 		arithmetic.subtraction(firstNumber, secondNumber);
-		assertEquals(2, arithmetic.getSubtraction());
+		assertEquals(2, arithmetic.getSubtraction(), "subtraction error.");
 	}
 	
 	@Test
@@ -57,7 +57,7 @@ class ArithmeticTest {
 		int secondNumber= 3;
 		
 		arithmetic.multiplication(firstNumber, secondNumber);
-		assertEquals(9, arithmetic.getMultiplication());
+		assertEquals(9, arithmetic.getMultiplication(), "multiplication error");
 		
 	}
 }

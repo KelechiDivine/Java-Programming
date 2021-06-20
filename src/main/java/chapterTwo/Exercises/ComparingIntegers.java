@@ -12,7 +12,7 @@ public class ComparingIntegers {
 			System.out.printf("Compared successfully(numbers are equal): %s ", compared);
 		
 		if (firstNumber < secondNumber)
-			System.out.printf("First number too low %d%n", firstNumber);
+			System.out.printf("Second number is the highest %d%n", firstNumber);
 		
 		if (firstNumber > secondNumber)
 			System.out.printf("Second number too low %d%n", secondNumber);
