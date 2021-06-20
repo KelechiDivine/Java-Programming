@@ -4,40 +4,42 @@ package chapterTwo.Exercises;
 public class Arithmetic {
 	
 	private int sum;
-	private int division;
+	private double division;
 	private int subtraction;
 	private int multiplication;
 	
-	public void sum(int firstNumber, int secondNumber) {
-		sum = firstNumber + secondNumber;
-	}
 	
-	public int getSum() {
-		return sum;
-	}
-	
-	public void division(int firstNumber, int secondNumber) {
-		division = firstNumber / secondNumber;
-	}
-	
-	public int getDivision() {
-		return division;
-	}
-	
-	public void subtraction(int firstNumber, int secondNumber) {
-		subtraction = firstNumber - secondNumber;
-	}
-	
-	public int getSubtraction() {
-		return subtraction;
-	}
-	
-	public void multiplication(int firstNumber, int secondNumber) {
-		multiplication = firstNumber * secondNumber;
+	public void getMultiplicationClassMethod(int number1, int number2) {
+		
+		multiplication= number1 * number2;
 	}
 	
 	public int getMultiplication() {
 		return multiplication;
 	}
 	
+	public void getSubtractionClassMethod(int number1, int number2) {
+		subtraction = number1 - number2;
+	}
+	
+	public int getSubtraction() {
+		return subtraction;
+	}
+	
+	public void getDivisionClassMethod(float number1, float number2) {
+		division = number1 / number2;
+	}
+	
+	
+	public double getDivision() {
+		return division;
+	}
+	
+	public void getSumClassMethod(int number1, int number2) {
+		sum= number1 + number2;
+	}
+	
+	public int getSum() {
+		return sum;
+	}
 }

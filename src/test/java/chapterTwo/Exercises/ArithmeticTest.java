@@ -1,5 +1,6 @@
 package chapterTwo.Exercises;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,52 +13,45 @@ class ArithmeticTest {
 	}
 	
 	@Test
-	public void sumOfArithmetic(){
+	public void thisTestClassChecksTheSumOfArithmeticAndItWillPassIfTheMethodLogicIsEqualToTheExpectedResultInTheTestClass(){
 		
 		Arithmetic arithmetic= new Arithmetic();
 		
-		int firstNumber= 2;
-		int secondNumber= 3;
+		arithmetic.getSumClassMethod(4, 7);
 		
-		arithmetic.sum(firstNumber, secondNumber);
-		assertEquals(5, arithmetic.getSum(), "sum not found.");
+		Assertions.assertEquals(11, arithmetic.getSum(), "sum not found.");
 		
 	}
 	
 	@Test
-	public void divisionOfArithmetic(){
+	public void thisTestClassChecksTheDivisionOfArithmeticAndItWillPassIfTheMethodLogicIsEqualToTheExpectedResultInTheTestClass(){
 		
 		Arithmetic arithmetic= new Arithmetic();
 		
-		int firstNumber= 4;
-		int secondNumber= 2;
 		
-		arithmetic.division(firstNumber, secondNumber);
-		assertEquals(2, arithmetic.getDivision(), "number division is null.");
+		arithmetic.getDivisionClassMethod(3, 6);
+		
+		Assertions.assertEquals(0, arithmetic.getDivision(), "number division is null.");
 	}
 	
 	@Test
-	public void subtractionOfArithmetic(){
+	public void thisTestClassChecksTheSubtractionOfArithmeticAndItWillPassIfTheMethodLogicIsEqualToTheExpectedResultInTheTestClass(){
 		
 		Arithmetic arithmetic= new Arithmetic();
 		
-		int firstNumber= 5;
-		int secondNumber= 3;
+		arithmetic.getSubtractionClassMethod(2, 3);
 		
-		arithmetic.subtraction(firstNumber, secondNumber);
-		assertEquals(2, arithmetic.getSubtraction(), "subtraction error.");
+		Assertions.assertEquals(-1, arithmetic.getSubtraction(), "subtraction error.");
 	}
 	
 	@Test
-	public void multiplicationOfArithmetic(){
+	public void thisTestClassChecksTheMultiplicationOfArithmeticAndItWillPassIfTheMethodLogicIsEqualToTheExpectedResultInTheTestClass(){
 		
 		Arithmetic arithmetic= new Arithmetic();
 		
-		int firstNumber= 3;
-		int secondNumber= 3;
+		arithmetic.getMultiplicationClassMethod(2, 3);
 		
-		arithmetic.multiplication(firstNumber, secondNumber);
-		assertEquals(9, arithmetic.getMultiplication(), "multiplication error");
+		Assertions.assertEquals(6, arithmetic.getMultiplication(), "multiplication error");
 		
 	}
 }

@@ -16,43 +16,55 @@ class ArithmeticSmallestAndLargestTest {
 	}
 	
 	@Test
-	public void checkingSumThreeNumbers(){
+	public void thisTestClassChecksTheSumOfThreeNumbersAndReturnsTheExpectedResult(){
 		
 		ArithmeticSmallestAndLargest arithmeticSmallestAndLargest= new ArithmeticSmallestAndLargest();
 		
-		int firstNumber= 2;
-		int secondNumber= 4;
-		int thirdNumber= 1;
+		arithmeticSmallestAndLargest.getSumClassMethod(45, 2, 4);
 		
-		arithmeticSmallestAndLargest.sum(firstNumber, secondNumber, thirdNumber);
-		Assertions.assertEquals(7, arithmeticSmallestAndLargest.getSum());
+		Assertions.assertEquals(51, arithmeticSmallestAndLargest.getSum());
 	}
 	
 	@Test
-	public void checkingProductForThreeNumber(){
+	public void thisTestClassChecksTheProductsOfThreeNumbersAndReturnsTheExpectedResult(){
 		
 		ArithmeticSmallestAndLargest arithmeticSmallestAndLargest = new ArithmeticSmallestAndLargest();
 		
-		int firstNumber= 3;
-		int secondNumber= 4;
-		int thirdNumber= 1;
+		arithmeticSmallestAndLargest.getProductClassMethod(2, 3, 4);
 		
-		arithmeticSmallestAndLargest.products(firstNumber, secondNumber, thirdNumber);
-		Assertions.assertEquals(12, arithmeticSmallestAndLargest.getProducts(), "Test is invalid!" );
+		Assertions.assertEquals(24, arithmeticSmallestAndLargest.getProducts(), "Test is invalid!" );
 	}
 	
 	@Test
-	public void checkingAverageForThreeNumbers(){
+	public void thisTestClassChecksTheAverageOfThreeNumbersAndReturnsTheExpectedResult(){
 		
 		ArithmeticSmallestAndLargest arithmeticSmallestAndLargest= new ArithmeticSmallestAndLargest();
+	
+		arithmeticSmallestAndLargest.getAverageClassMethod(2, 4, 4);
 		
-		int firstNumber= 2;
-		int secondNumber= 3;
-		int thirdNumber= 1;
-		
-		arithmeticSmallestAndLargest.average(firstNumber, secondNumber, thirdNumber);
-//		System.out.println("Test passed.");
-		Assertions.assertEquals(3, arithmeticSmallestAndLargest.getAverage(), "Average not found");
+		Assertions.assertEquals(5, arithmeticSmallestAndLargest.getAverage(), "Average not found");
 	}
+	
+	@Test
+	public void thisIsATestThatLoopsThroughThreeNumbersAndCheckForTheLowestNumber(){
+		
+		ArithmeticSmallestAndLargest arithmeticSmallestAndLargest = new ArithmeticSmallestAndLargest();
+		
+		arithmeticSmallestAndLargest.getSmallestClassMethod(2, 5, 7);
+		
+		Assertions.assertEquals(2, arithmeticSmallestAndLargest.getMinimumNumber());
+	
+	}
+	
+	@Test
+	public void thisIsATestThatLoopsThroughThreeNumbersAndCheckForTheHighestNumber(){
+		
+		ArithmeticSmallestAndLargest arithmeticSmallestAndLargest = new ArithmeticSmallestAndLargest();
+		
+		arithmeticSmallestAndLargest.getLargestClassMethod(2, 5, 9);
+		
+		Assertions.assertEquals(9, arithmeticSmallestAndLargest.getMaximum());
+	}
+	
 
 }

@@ -4,7 +4,6 @@ public class LargestAndSmallestIntegers {
 	
 	int largestNumber= Integer.MIN_VALUE;
 	int smallestNumber = Integer.MAX_VALUE;
-	int equalNumbers = Integer.compare(smallestNumber, largestNumber);
 	
 	public void largestNumberMethod(int number1, int number2, int number3, int number4, int number5) {
 		

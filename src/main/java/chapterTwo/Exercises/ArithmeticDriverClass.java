@@ -22,10 +22,10 @@ public class ArithmeticDriverClass {
 		int secondNumber = userInput.nextInt();
 		
 		
-		arithmetic.division(firstNumber, secondNumber);
-		arithmetic.sum(firstNumber, secondNumber);
-		arithmetic.subtraction(firstNumber, secondNumber);
-		arithmetic.multiplication(firstNumber, secondNumber);
+		arithmetic.getDivisionClassMethod(firstNumber, secondNumber);
+		arithmetic.getSumClassMethod(firstNumber, secondNumber);
+		arithmetic.getSubtractionClassMethod(firstNumber, secondNumber);
+		arithmetic.getMultiplicationClassMethod(firstNumber, secondNumber);
 		
 		System.out.printf("Sum of the numbers is: %d%n", arithmetic.getSum());
 
@@ -33,7 +33,7 @@ public class ArithmeticDriverClass {
 
 		System.out.printf("Difference of the number is: %d%n", arithmetic.getSubtraction());
 
-		System.out.printf("Quotient of the number is: %d%n", arithmetic.getDivision());
+		System.out.printf("Quotient of the number is: %.2f", arithmetic.getDivision());
 	
 	}
 }

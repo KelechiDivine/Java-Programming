@@ -21,7 +21,11 @@ public class ComparingIntegersDriverClass {
 		System.out.print("Enter second number: ");
 		int secondInput = userInput.nextInt();
 		
-		comparingIntegers.comparing(firstInput, secondInput);
+		comparingIntegers.getComparingClassMethod(firstInput, secondInput);
+		comparingIntegers.getTheLargestNumberInAnUserInput(firstInput, secondInput);
+		comparingIntegers.getTheSmallestNumberInAUserInput(firstInput, secondInput);
 		
+		System.out.printf("Is large: %d", comparingIntegers.getLarge());
+		System.out.printf("\nIs small: %d", comparingIntegers.getSmall());
 	}
 }

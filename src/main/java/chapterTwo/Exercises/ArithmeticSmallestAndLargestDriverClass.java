@@ -24,41 +24,20 @@ public class ArithmeticSmallestAndLargestDriverClass {
 		System.out.print("Enter second number: ");
 		int secondNumber = userInput.nextInt();
 
-		System.out.print("Enter third number: ");
+		System.out.print("Enter third number: \n");
 		int thirdNumber = userInput.nextInt();
 
-		arithmeticSmallestAndLargest.sum(firstNumber, secondNumber, thirdNumber);
-		arithmeticSmallestAndLargest.products(firstNumber, secondNumber, thirdNumber);
-		arithmeticSmallestAndLargest.average(firstNumber, secondNumber, thirdNumber);
-		
-//		Checking for the largest number
-		
-		if(firstNumber > secondNumber && firstNumber > thirdNumber)
-			System.out.println("First number is the highest number\n");
+		arithmeticSmallestAndLargest.getSumClassMethod(firstNumber, secondNumber, thirdNumber);
+		arithmeticSmallestAndLargest.getProductClassMethod(firstNumber, secondNumber, thirdNumber);
+		arithmeticSmallestAndLargest.getAverageClassMethod(firstNumber, secondNumber, thirdNumber);
+		arithmeticSmallestAndLargest.getSmallestClassMethod(firstNumber, secondNumber, thirdNumber);
+		arithmeticSmallestAndLargest.getLargestClassMethod(firstNumber, secondNumber, thirdNumber);
 
-		if(secondNumber > firstNumber && secondNumber > thirdNumber)
-			System.out.println("Second number is the highest number\n");
-
-		if(thirdNumber > firstNumber && thirdNumber > secondNumber)
-			System.out.println("Third number is the highest number\n");
-
-//		Checking for the smallest number
-		
-		if(firstNumber < secondNumber && firstNumber < thirdNumber)
-			System.out.println("First number is the lowest integer ");
-
-
-		if(secondNumber < firstNumber && secondNumber < thirdNumber)
-			System.out.println("Second number is the lowest integer");
-
-
-		if(thirdNumber < firstNumber && thirdNumber < secondNumber)
-			System.out.println("Third number is the lowest integer. ");
-
-
-		System.out.printf("The sum of the numbers is => %d%n", arithmeticSmallestAndLargest.getSum());
-		System.out.printf("The products of the numbers is => %d%n", arithmeticSmallestAndLargest.getProducts());
-		System.out.printf("The average of the numbers is => %d%n", arithmeticSmallestAndLargest.getAverage());
+		System.out.printf("The sum of the numbers is: %d%n", arithmeticSmallestAndLargest.getSum());
+		System.out.printf("The products of the numbers is: %d%n", arithmeticSmallestAndLargest.getProducts());
+		System.out.printf("The average of the numbers is: %d%n", arithmeticSmallestAndLargest.getAverage());
+		System.out.printf("The Lowest number is: %d%n", arithmeticSmallestAndLargest.getMinimumNumber());
+		System.out.printf("The Highest number is: %d%n", arithmeticSmallestAndLargest.getMaximum());
 
 	}
 }
