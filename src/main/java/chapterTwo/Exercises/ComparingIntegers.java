@@ -18,12 +18,6 @@ public class ComparingIntegers {
 		
 			if (number1 == number2)
 				System.out.printf("Compared successfully(numbers are equal): %s ", compared);
-//
-//			if (number1 < number2)
-//				System.out.printf("Second number is the highest %d%n", number2);
-//
-//			if (number1 > number2)
-//				System.out.printf("Second number too low %d%n", number1);
 	}
 	
 	public void getTheLargestNumberInAnUserInput(int number1, int number2) {

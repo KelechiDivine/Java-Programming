@@ -22,20 +22,19 @@ public class DiameterCircumferenceAndAreaOfACircleDriverClass {
 //		numbers in Chapter 3.
 		
 		DiameterCircumferenceAndAreaOfACircle diameterCircumferenceAndAreaOfACircle = new DiameterCircumferenceAndAreaOfACircle();
-		
 		Scanner userInput = new Scanner(System.in);
 		
 		System.out.print("Enter circumference of a circle: ");
 		int findRadius = userInput.nextInt();
 		
-		diameterCircumferenceAndAreaOfACircle.circleDiameter(findRadius);
-		diameterCircumferenceAndAreaOfACircle.circleRadius(findRadius);
-		diameterCircumferenceAndAreaOfACircle.circleArea(findRadius);
+		diameterCircumferenceAndAreaOfACircle.getDiameterOfCircleMethod(findRadius);
+		diameterCircumferenceAndAreaOfACircle.getAreaOfACircle(findRadius);
+		diameterCircumferenceAndAreaOfACircle.getRadiusOfACircleMethod(findRadius);
 		
 
-		System.out.printf("Radius = %s", diameterCircumferenceAndAreaOfACircle.getRadius());
-		System.out.printf("\nDiameter = %s", diameterCircumferenceAndAreaOfACircle.getDiameter());
-		System.out.printf("\nArea= %s", diameterCircumferenceAndAreaOfACircle.getArea());
+		System.out.printf("Radius = %s", diameterCircumferenceAndAreaOfACircle.getRadiusFromAUser());
+		System.out.printf("\nDiameter = %s", diameterCircumferenceAndAreaOfACircle.getDiameterFromUserInput());
+		System.out.printf("\nArea= %s", diameterCircumferenceAndAreaOfACircle.getAreaFromUserInput());
 
 	}
 }

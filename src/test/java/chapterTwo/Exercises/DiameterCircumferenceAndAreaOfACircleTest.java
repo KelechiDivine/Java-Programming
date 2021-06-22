@@ -16,35 +16,30 @@ class DiameterCircumferenceAndAreaOfACircleTest {
 	}
 	
 	@Test
-	public void findingTheRadiusOfaCircle(){
-		
+	public void thisTestClassHelpsFindTheDiameterOfACircleFromAUserInput(){
 		DiameterCircumferenceAndAreaOfACircle diameterCircumferenceAndAreaOfACircle = new DiameterCircumferenceAndAreaOfACircle();
-		
-		int diameter= 8;
-
-		diameterCircumferenceAndAreaOfACircle.circleRadius(diameter);
-		Assertions.assertEquals(4, diameterCircumferenceAndAreaOfACircle.getRadius(), "was not able to get radius");
+		diameterCircumferenceAndAreaOfACircle.getDiameterOfCircleMethod(4);
+		Assertions.assertEquals(8, diameterCircumferenceAndAreaOfACircle.getDiameterFromUserInput(), "The diameter of the circle was never found from user input");
 	}
 	
 	@Test
-	public void findingTheDiameterOfACircle(){
-		
+	public void thisTestClassHelpsFindTheARadiusOfACircleFromAUserInput(){
 		DiameterCircumferenceAndAreaOfACircle diameterCircumferenceAndAreaOfACircle = new DiameterCircumferenceAndAreaOfACircle();
-		
-		int radius = 4;
-		
-		diameterCircumferenceAndAreaOfACircle.circleDiameter(radius);
-		Assertions.assertEquals(8, diameterCircumferenceAndAreaOfACircle.getDiameter(), "diameter was not found.");
+		diameterCircumferenceAndAreaOfACircle.getRadiusOfACircleMethod(6);
+		Assertions.assertEquals(3, diameterCircumferenceAndAreaOfACircle.getRadiusFromAUser(), "The radius of the circle was never found from user input.");
 	}
 	
 	@Test
-	public void findingTheAreaOfACircle(){
-		
+	public void thisTestClassHelpsFindTheAreaOfACircleFromAUserInput(){
 		DiameterCircumferenceAndAreaOfACircle diameterCircumferenceAndAreaOfACircle = new DiameterCircumferenceAndAreaOfACircle();
-		
-		double radius = 4;
-		
-		diameterCircumferenceAndAreaOfACircle.circleArea(radius);
-		Assertions.assertEquals(50.26544, diameterCircumferenceAndAreaOfACircle.getArea(), "area not found.");
+		diameterCircumferenceAndAreaOfACircle.getAreaOfACircle(4);
+		Assertions.assertEquals(50.26548245743669, diameterCircumferenceAndAreaOfACircle.getAreaFromUserInput(), "The area of the circle was never found fro the user input.");
+	}
+	
+	@Test
+	public void thisTestClassHelpsFindTheCircumferenceOfACircleFromAUserInput(){
+		DiameterCircumferenceAndAreaOfACircle diameterCircumferenceAndAreaOfACircle =  new DiameterCircumferenceAndAreaOfACircle();
+		diameterCircumferenceAndAreaOfACircle.getCircumferenceOfACircle(4);
+		Assertions.assertEquals(25.132741228718345, diameterCircumferenceAndAreaOfACircle.getCircumference(), "There is no user circumference found!");
 	}
 }
