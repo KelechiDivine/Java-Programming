@@ -4,7 +4,7 @@ import java.util.*;
 
 public class RemoveAll {
 	
-	public static void main(String[] args){
+	public static void main(String... args){
 		
 		Set<Integer> numbers = new LinkedHashSet<>();
 		

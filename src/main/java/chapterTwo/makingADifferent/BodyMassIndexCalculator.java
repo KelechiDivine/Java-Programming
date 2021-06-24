@@ -11,8 +11,7 @@ public class BodyMassIndexCalculator {
 //		Human Services/National Institutes of Health so the user can evaluate his/her BMI:
 		
 		Scanner userShouldEnterAWeightOrHeight = new Scanner(System.in);
-//
-//		No instance variable is declared here... Oppss!!!
+		
 		int weight;
 		int height;
 		int bmi;
