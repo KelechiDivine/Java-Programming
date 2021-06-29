@@ -2,59 +2,112 @@ package chapterThree.exercises;
 
 public class ComputerizationOfHealthRecords {
 	
-	int month;
-	int day;
-	int yearOfBirth;
-	int height;
-	int weight;
+	String firstName;
+	String lastName;
+	int age;
+	String gender;
+	String yearOfBirth;
+	double height;
+	double weight;
 	
-	public ComputerizationOfHealthRecords(int month, int day, int yearOfBirth, int height, int weight) {
-		this.month = month;
-		this.day = day;
+	
+	public void healthRecordMethodForYearOfBirth(String yearOfBirth) {
 		this.yearOfBirth = yearOfBirth;
-		this.height = height;
-		this.weight = weight;
 	}
 	
-	public int getMonth() {
-		return month;
-	}
-	
-	public void setMonth(int month) {
-		this.month = month;
-	}
-	
-	public int getDay() {
-		return day;
-	}
-	
-	public void setDay(int day) {
-		this.day = day;
-	}
-	
-	public int getYearOfBirth() {
+	public String setYearOfBirth(String yearOfBirth) {
+		this.yearOfBirth = yearOfBirth;
 		return yearOfBirth;
 	}
 	
-	public void setYearOfBirth(int yearOfBirth) {
-		this.yearOfBirth = yearOfBirth;
+	public String getYearOfBirth() {
+		return yearOfBirth;
 	}
 	
-	public int getHeight() {
-		return height;
+	public void healthRecordMethodForFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	
-	public void setHeight(int height) {
-		this.height = height;
+	public String getFirstName() {
+		return firstName;
 	}
 	
-	public int getWeight() {
-		return weight;
+	public void healthRecordMethodForLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	
-	public void setWeight(int weight) {
+	public String getLastName() {
+		return lastName;
+	}
+	
+	
+	public void heightRecordMethodForWeight(double weight) {
 		this.weight = weight;
 	}
 	
-//	public int calculateUser
+	public double getWeight() {
+		return weight;
+	}
+	
+	public void healthRecordMethodForHeight(double height) {
+		this.height = height;
+	}
+	
+	public double getHeight() {
+		return height;
+	}
+//
+//	public void healthRecordMethodForAge(int age) {
+//		this.age = age;
+//	}
+//
+//	public int getAge() {
+//		return age;
+//	}
+	
+	public void healthRecordMethodForGender(String gender) {
+		this.gender = gender;
+	}
+	
+	public String getGender() {
+		return gender;
+	}
+	
+	public String setFirstName(String firstName) {
+		this.firstName = getFirstName();
+		return firstName;
+	}
+	
+	public String setLastName(String lastName) {
+		this.lastName = getLastName();
+		return lastName;
+	}
+	
+	public double setWeight(double weight) {
+		this.weight = getWeight();
+		return weight;
+
+
+//		def function_for_weight(self, double weight):
+//			self.weight = weight
+//		return weight
+	
+	}
+	
+	public double setHeight(double height) {
+		this.height = getHeight();
+		
+		return height;
+	}
+	
+//	public int setAge(int age) {
+//		this.age = getAge();
+//		return age;
+//	}
+//
+	public String setGender(String gender) {
+		this.gender = getGender();
+		return gender;
+	}
+	
 }
