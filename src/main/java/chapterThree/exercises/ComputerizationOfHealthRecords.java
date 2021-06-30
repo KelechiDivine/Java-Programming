@@ -11,15 +11,6 @@ public class ComputerizationOfHealthRecords {
 	double weight;
 	
 	
-	public void healthRecordMethodForYearOfBirth(String yearOfBirth) {
-		this.yearOfBirth = yearOfBirth;
-	}
-	
-	public String setYearOfBirth(String yearOfBirth) {
-		this.yearOfBirth = yearOfBirth;
-		return yearOfBirth;
-	}
-	
 	public String getYearOfBirth() {
 		return yearOfBirth;
 	}
@@ -100,14 +91,21 @@ public class ComputerizationOfHealthRecords {
 		return height;
 	}
 	
-//	public int setAge(int age) {
-//		this.age = getAge();
-//		return age;
-//	}
-//
 	public String setGender(String gender) {
 		this.gender = getGender();
 		return gender;
 	}
 	
+	public void healthRecordMethodForDateOfBirth(String yearOfBirth) {
+		this.yearOfBirth = yearOfBirth;
+	}
+	
+	public String getDateOfBirth() {
+		return yearOfBirth;
+	}
+	
+	public String setDateOfBirth(String yearOfBirth) {
+		this.yearOfBirth = yearOfBirth;
+		return yearOfBirth;
+	}
 }

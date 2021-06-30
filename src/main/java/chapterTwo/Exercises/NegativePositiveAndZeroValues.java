@@ -5,11 +5,6 @@ import java.util.Scanner;
 public class NegativePositiveAndZeroValues {
 	
 	public static void main(String[] args){
-	
-//
-//		Write a program that inputs five numbers and determines and prints the number of negative numbers input, the number of positive numbers input and
-//		the number of zeros input.
-		
 		
 		 Scanner  inputThatDeterminesWhetherAIntegerIsPositiveOrNegative = new Scanner(System.in);
 		 

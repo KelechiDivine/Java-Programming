@@ -22,9 +22,6 @@ public class LargestAndSmallestIntegers {
 		
 		if (number5 > largestNumber)
 			largestNumber = number5;
-		
-		
-		
 	}
 	
 	public int getTheLargestNumber() {

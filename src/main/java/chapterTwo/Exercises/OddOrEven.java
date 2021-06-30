@@ -5,11 +5,6 @@ import java.util.Scanner;
 public class OddOrEven {
 	
 	public static void main (String[] args){
-	
-	
-//		 Write an application that reads an integer and determines and prints
-//		whether it’s odd or even. [Hint: Use the remainder operator. An even
-//		number is a multiple of 2. Any multiple of 2 leaves a remaind
 		
 		Scanner applicationThatReadsInputs = new Scanner(System.in);
 		

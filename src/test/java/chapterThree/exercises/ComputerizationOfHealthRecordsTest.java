@@ -75,18 +75,6 @@ class ComputerizationOfHealthRecordsTest {
 		Assertions.assertEquals(34, computerizationOfHealthRecords.setHeight(34), "Height not set.");
 	}
 	
-//	@Test
-//	public void testThatAgeCanBeObtained(){
-//		ComputerizationOfHealthRecords computerizationOfHealthRecords = new ComputerizationOfHealthRecords();
-//		computerizationOfHealthRecords.healthRecordMethodForAge(21);
-//		Assertions.assertEquals(21, computerizationOfHealthRecords.getAge(), "Age was not obtained.");
-//	}
-//	@Test
-//	public void testThatAgeCanBeSet(){
-//		ComputerizationOfHealthRecords computerizationOfHealthRecords = new ComputerizationOfHealthRecords();
-//		Assertions.assertEquals(23, computerizationOfHealthRecords.setAge(23), "Age was not set.");
-//	}
-	
 	@Test
 	public void testThatGenderNotNull(){
 		ComputerizationOfHealthRecords computerizationOfHealthRecords = new ComputerizationOfHealthRecords();
