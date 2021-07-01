@@ -6,16 +6,11 @@ import org.junit.jupiter.api.Test;
 
 class ArithmeticTest {
 	
-	@BeforeEach
-	void setUp() {
-	}
-	
 	@Test
 	public void thisTestClassChecksTheSumOfArithmeticAndItWillPassIfTheMethodLogicIsEqualToTheExpectedResultInTheTestClass(){
 		Arithmetic arithmetic= new Arithmetic();
 		arithmetic.getSumClassMethod(4, 7);
 		Assertions.assertEquals(11, arithmetic.getSum(), "sum not found.");
-		
 	}
 	
 	@Test

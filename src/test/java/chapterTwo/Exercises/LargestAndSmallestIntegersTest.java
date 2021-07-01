@@ -1,16 +1,9 @@
 package chapterTwo.Exercises;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class LargestAndSmallestIntegersTest {
-	
-	@BeforeEach
-	void setUp() {
-	}
 	
 	@Test
 	public void thisIsATestThatLoopsThroughFiveNumbersAndCheckForTheHighestNumber(){

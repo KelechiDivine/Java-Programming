@@ -21,7 +21,7 @@ public class SalesCommissionCalculatorTest {
 		
 		Scanner salesManInput = new Scanner(System.in);
 		
-		SalesCommissionCalculator salesCommissionCalculator = new SalesCommissionCalculator(2, 4,
+ 		SalesCommissionCalculator salesCommissionCalculator = new SalesCommissionCalculator(2, 4,
 				4, 5, 7);
 
 		System.out.print("ITEMS\t\t\tVALUES");
