@@ -6,8 +6,8 @@ public class AccountTestClass {
 
 	public static void main(String[] args){
 		
-		Account account1 = new Account("Jane", 50.00);
-		Account account2 = new Account("Kelechi", 456.77);
+		Account account1 = new Account("Victoria", 50.00);
+		Account account2 = new Account("Adamma",	 456.77);
 		
 		System.out.printf("%s balance: $%.2f%n", account1.getName(),
 				account1.getBalance());
@@ -34,7 +34,8 @@ public class AccountTestClass {
 		
 		System.out.printf("%s balance: $ %.2f  %n", account1.getName(), account1.getBalance());
 		System.out.printf("%s balance: $ %.2f  %n%n", account2.getName(), account2.getBalance());
-
-	
+		
+		double newAccount = depositAmount;
+		System.out.print(newAccount);
 	}
 }

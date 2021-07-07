@@ -3,8 +3,6 @@ package chapterTwo.Exercises;
 import java.util.Scanner;
 
 public class DiameterCircumferenceAndAreaOfACircleDriverClass {
-	
-	
 
 	public static void main(String[] args){
 
@@ -17,7 +15,6 @@ public class DiameterCircumferenceAndAreaOfACircleDriverClass {
 		diameterCircumferenceAndAreaOfACircle.getDiameterOfCircleMethod(findRadius);
 		diameterCircumferenceAndAreaOfACircle.getAreaOfACircle(findRadius);
 		diameterCircumferenceAndAreaOfACircle.getRadiusOfACircleMethod(findRadius);
-		
 
 		System.out.printf("Radius = %s", diameterCircumferenceAndAreaOfACircle.getRadiusFromAUser());
 		System.out.printf("\nDiameter = %s", diameterCircumferenceAndAreaOfACircle.getDiameterFromUserInput());

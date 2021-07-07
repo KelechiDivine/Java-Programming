@@ -11,12 +11,13 @@ public class MultiplesDriverClass {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("Enter a first number: ");
-		int ifUserEntersFirstNumber = scanner.nextInt();
+		int numberOne = scanner.nextInt();
 		
 		System.out.print("Enter second number: ");
-		int ifUserEntersSecondNumber = scanner.nextInt();
+		int numberTwo = scanner.nextInt();
 		
-		multiples.checkForMultiples(ifUserEntersFirstNumber, ifUserEntersSecondNumber);
+		multiples.checkForMultiples(numberOne, numberTwo);
+		multiples.isNotMultiple(numberOne, numberTwo);
 		
 	}
 }

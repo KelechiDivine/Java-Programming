@@ -9,7 +9,7 @@ class LargestAndSmallestIntegersTest {
 	public void thisIsATestThatLoopsThroughFiveNumbersAndCheckForTheHighestNumber(){
 		LargestAndSmallestIntegers largestAndSmallestIntegers  = new LargestAndSmallestIntegers();
 		largestAndSmallestIntegers.largestNumberMethod(2, 5, 6, 3, 9);
-		Assertions.assertEquals(9, largestAndSmallestIntegers.getTheLargestNumber(), "Largest number not found.");
+		Assertions.assertEquals(5, largestAndSmallestIntegers.getTheLargestNumber(), "Largest number not found.");
 	}
 	
 	
