@@ -22,48 +22,16 @@ public class TargetHeartRateCalculator {
 		return firstName;
 	}
 	
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
 	public String getLastName() {
 		return lastName;
-	}
-	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-	public int getMonth() {
-		return month;
-	}
-	
-	public void setMonth(int month) {
-		this.month = month;
-	}
-	
-	public int getDay() {
-		return day;
-	}
-	
-	public void setDay(int day) {
-		this.day = day;
 	}
 	
 	public int getYear() {
 		return year;
 	}
 	
-	public void setYear(int year) {
-		this.year = year;
-	}
-	
-	public String getDob(){
-		return String.format("%d%d%d", month, day, year);
-	}
-	
 	public int getPersonAge(){
-	return	java.util.Calendar.getInstance().get(java.util.Calendar.YEAR) - getYear();
+		return	java.util.Calendar.getInstance().get(java.util.Calendar.YEAR) - getYear();
 	}
 	
 	// calculate and return max heart rate

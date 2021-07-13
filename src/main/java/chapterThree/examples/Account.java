@@ -2,9 +2,6 @@ package chapterThree.examples;
 
 public class Account {
 
-
-//	Instance variable are always declared inside the class
-	
 	private String name;
 	private double balance;
 	

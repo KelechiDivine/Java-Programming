@@ -11,7 +11,7 @@ public class ComputerizationOfHealthRecordsTest {
 				, 39, 2003, 18);
 		
 		System.out.printf("%s%15s%12s%10s%13s%10s%17s%10s%n", "Lastname", "Firstname", "Gender", "DoB", "Height", "Weight", "Yearofbirth",  "Age\n");
-//
+
 		System.out.printf("%s%12s%12s%14s%9s%10s%15s%11s%n", instanceOfTheClasss.lastname, instanceOfTheClasss.firstname, instanceOfTheClasss.gender
 			, instanceOfTheClasss.dOb, instanceOfTheClasss.getHeight(), instanceOfTheClasss.getWeight(), instanceOfTheClasss.getYearOfBirth(),
 				instanceOfTheClasss.getAge());

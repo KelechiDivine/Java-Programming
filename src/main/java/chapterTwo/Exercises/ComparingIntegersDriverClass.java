@@ -3,8 +3,6 @@ package chapterTwo.Exercises;
 import java.util.Scanner;
 
 public class ComparingIntegersDriverClass {
-	
-	
 	public static void main(String[] args) {
 
 		ComparingIntegers comparingIntegers = new ComparingIntegers();
