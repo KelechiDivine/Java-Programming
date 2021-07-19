@@ -1,6 +1,6 @@
 package chapterSix.examples;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class MaximumFinder {
 	
@@ -9,7 +9,6 @@ public class MaximumFinder {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("Enter three floating-point values by spaces: ");
-		
 		double numberOne = scanner.nextDouble();
 		double numberTwo = scanner.nextDouble();
 		double numberThree = scanner.nextDouble();
