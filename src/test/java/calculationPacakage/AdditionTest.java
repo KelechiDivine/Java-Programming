@@ -32,5 +32,9 @@ class AdditionTest {
 		division.dividingTwoNumbers(4, 2);
 		Assertions.assertEquals(2, division.getDivisionResult());
 	}
+	
+	@Test
+	public void main(){}
+	
 
 }
