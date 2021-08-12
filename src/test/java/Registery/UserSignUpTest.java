@@ -3,7 +3,6 @@ package Registery;
 import Registery.Exceptions.EmailCantBeEmptyException;
 import Registery.Exceptions.EmailFieldException;
 import Registery.Exceptions.OutOfLengthMobileException;
-import Registery.Exceptions.YearOfBirthOutOfLengthException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -57,7 +56,4 @@ class UserSignUpTest {
 //		lengthIsWithinRange.setYearOfBirth(2004);
 //		Assertions.assertEquals(2004, lengthIsWithinRange.getYearOfBirth());
 //	}
-
-
-
 }
