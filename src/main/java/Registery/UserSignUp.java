@@ -4,9 +4,7 @@ package Registery;
 import Registery.Exceptions.EmailCantBeEmptyException;
 import Registery.Exceptions.EmailFieldException;
 import Registery.Exceptions.OutOfLengthMobileException;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Optional;
+import Registery.Exceptions.YearOfBirthOutOfLengthException;
 
 public class UserSignUp {
 	
@@ -57,7 +55,6 @@ public class UserSignUp {
 	}
 	
 	public void setEmail(String email) throws EmailCantBeEmptyException, EmailFieldException {
-		
 		// check if email contains "@gmail.com"
 		
 		if (email.contains("@gmail.com")){
@@ -85,17 +82,28 @@ public class UserSignUp {
 	}
 	
 	public void setMobile(String mobile) throws OutOfLengthMobileException{
-		while (mobile.length() == 11)
+
+		if (mobile.length() == 11)
 			System.out.println(mobile);
 		
-		// Just in-case the mobile format will contain "+234 ...."
-		// We wanna check that the program shouldn't throw any error
+		// if mobile number should contain +234; The length of the mobile number will be 13
+		// so we wanna check and handle the format.
 		
-		Optional.of(mobile.contains("+234"));
-		System.out.println("This mobile number is optional in the database..");
+		while (mobile.length() == 13) {
+			if (mobile.contains("+234")) {
+				System.out.println(mobile);
+			}
+			else{
+				break;
+			}
+			
+			System.out.println("Mobile number is @Transient");
+		}
 		
-		if (mobile.length() > 11){
-			throw new OutOfLengthMobileException("Invalid phone number format.");
+		// if mobile number length is less than 11
+		// we wanna be able to control and handle that exception
+		if (mobile.length() < 11 || mobile.length() > 13){
+			throw new OutOfLengthMobileException("Mobile number length out of bound");
 		}
 		this.mobile = mobile;
 	}
@@ -120,7 +128,7 @@ public class UserSignUp {
 		return password;
 	}
 	
-	public void setPassword(String password) {
+	public void setPassword(String password){
 		this.password = password;
 	}
 	
@@ -128,7 +136,14 @@ public class UserSignUp {
 		return YearOfBirth;
 	}
 	
-	public void setYearOfBirth(int YearOfBirth) {
+	public void setYearOfBirth(int YearOfBirth) throws YearOfBirthOutOfLengthException {
+//		int yobLength = 2002;
+//
+//		int newLength = String.valueOf(yobLength).length();
+//
+//		if (YearOfBirth != newLength){
+//			throw new YearOfBirthOutOfLengthException("Year of birth length is out of bound.");
+//		}
 		this.YearOfBirth = YearOfBirth;
 	}
 }
