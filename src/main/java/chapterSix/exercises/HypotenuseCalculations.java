@@ -7,6 +7,7 @@ public class HypotenuseCalculations {
 
 	public void isHypotenuse(double height, double weight){
 		double hypotenuse;
+	
 		hypotenuse = Math.sqrt((height * height) +(weight * weight));
 		hypotenuseVariable = hypotenuse;
 	}
