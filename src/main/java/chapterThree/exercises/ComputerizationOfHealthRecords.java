@@ -2,13 +2,13 @@ package chapterThree.exercises;
 
 public class ComputerizationOfHealthRecords {
 	
-	String firstName;
-	String lastName;
-	int age;
-	String gender;
-	String yearOfBirth;
-	double height;
-	double weight;
+	private String firstName;
+	private String lastName;
+	private int age;
+	private String gender;
+	private String yearOfBirth;
+	private double height;
+	private double weight;
 	
 	
 	public String getYearOfBirth() {
@@ -77,12 +77,6 @@ public class ComputerizationOfHealthRecords {
 	public double setWeight(double weight) {
 		this.weight = getWeight();
 		return weight;
-
-
-//		def function_for_weight(self, double weight):
-//			self.weight = weight
-//		return weight
-	
 	}
 	
 	public double setHeight(double height) {
