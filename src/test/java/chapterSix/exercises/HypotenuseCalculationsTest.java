@@ -9,21 +9,21 @@ public class HypotenuseCalculationsTest {
 	public void testHypotenuse(){
 		HypotenuseCalculations calculations = new HypotenuseCalculations();
 		calculations.isHypotenuse(3.0, 4.0);
-		Assertions.assertEquals(5.0, calculations.getHypotenuse());
+		Assertions.assertEquals(5.0, calculations.print());
 	}
 	
 	@Test
 	public void testHypotenuse1(){
 		HypotenuseCalculations hypotenuseCalculations = new HypotenuseCalculations();
 		hypotenuseCalculations.isHypotenuse(5.0, 12.0);
-		Assertions.assertEquals(13.0, hypotenuseCalculations.getHypotenuse());
+		Assertions.assertEquals(13.0, hypotenuseCalculations.print());
 	}
 	
 	@Test
 	public void testHypotenuse2(){
 		HypotenuseCalculations calculations = new HypotenuseCalculations();
 		calculations.isHypotenuse(8.0, 15.0);
-		Assertions.assertEquals(17.0, calculations.getHypotenuse());
+		Assertions.assertEquals(17.0, calculations.print());
 	}
 
 }
