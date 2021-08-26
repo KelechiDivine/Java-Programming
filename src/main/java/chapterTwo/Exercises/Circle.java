@@ -52,5 +52,4 @@ public class Circle {
 		System.out.printf("\nArea is %s", circle.getArea());
 		
 	}
-	
 }

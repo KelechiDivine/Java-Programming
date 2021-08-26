@@ -1,0 +1,34 @@
+When the code works, that's when you have to clean it. 
+Because no one writes clean code first. It is too hard to get a code to work;
+When the code works It will be a mess.... Human being don't think in a staight line at first.
+
+The only way to go fast is to go well
+
+You don't write noun as a function name: Function names should be a verb, because functions 
+do things (they do thing : They perform an action)
+
+-----------Functions------------
+1: Functions should  not be 100 lines long.
+2: Functions should hardly ever be 20 lines long (write a polite code)
+
+---- Second rule of function----
+
+1: A function should be small
+2: They should be smaller than that
+
+A function should do one thing. Your function should not be less than 6 lines.
+The function shouldn't take more than two or maximum three argument.
+Don't pass boolean in your functions. Make sure your code isn't surprising 
+
+
+--------Comment-------
+1: The proper use of comment is :
+	a: To compensate for our failure to express ourselves in code.
+
+2: Every use of a comment represent a failure.
+	a: So don''t comment first. Try everything else, then 
+	   comment as a resort
+
+Let all your local variable begin with 'a'(aDate)
+All of the arguement to a function begins with a 'var' (varFirstnumber)
+All instance variable begin with 'its' (itsBoy)

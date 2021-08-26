@@ -1,0 +1,41 @@
+----Design pattern-----
+
+Name the variable after the role it plays. The type can be
+inferred from context, and so doesn’t need to be part of 
+the name.
+
+---> Behaviour
+State is what is left after behavior is done. 
+
+---> Method
+You must write your methods with both of these audiences 
+in mind. Methods must do the work they are supposed 
+to do but they must also communicate the intent of the 
+work to be done.
+Overall, the goal of breaking your program into methods 
+is to communicate your intent clearly with your reader,
+ provide for future flexibility, and set
+yourself up for effective performance tuning where necessary.
+
+***How do you divide a program into methods***
+Programs need to do more than just instruct a computer,
+they need to communicate to people as well.
+The more small methods you create, the more messages 
+you will execute. Names is the most compelling reason to 
+keep methods small.  Dividing a program into methods 
+gives you an opportunity to guide that chunking.
+
+Small methods ease maintenance. Small methods also 
+make inheritance work smoothly. If you decide to
+specialize the behavior of a class written with 
+large methods, you will often 
+find yourself copying the code from the superclass
+into the subclass and changing a few lines. 
+
+---Rules of methods---
+Divide your program into methods that perform one 
+identifiable task. Keep all of the operations in
+a method at the same level of abstraction. 
+This will naturally result in programs with many small
+methods, each a few lines long.
+
