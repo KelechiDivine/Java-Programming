@@ -1,53 +1,59 @@
 package chapterSeven.excercise;
 
-import java.util.Arrays;
-
 public class AirlineReservations {
 	
 	int[] availableAirlineSeat = new int[10];
 	
-	int seatCapacity = 10;
-	int firstClassSeatVariable;
-	int economySeatVariable;
+	int planeSeatCapacity = 10;
+	int seatVariable;
+	int ecoSeatVariable;
 	int firstClassVariable;
 	int firstClassSeatType = -1;
-
+	private int firstClass;
+	private int economy;
 	
-	public void firstClassSeatPicker(int firstClassUserChoice) {
-		if (firstClassUserChoice >= 0 && firstClassUserChoice <= 5) {
-			firstClassSeatVariable = firstClassUserChoice;
+	
+	public void firstClassSeatPicker(int userChoice) {
+		if (userChoice >= 0 && userChoice <= 5) {
+			seatVariable = userChoice;
 			System.out.println("First class seat purchased.");
 		}
 	}
 	
-	public void economySeatPicker(int economyUserChoice){
-		if (economyUserChoice >= 5 && economyUserChoice <10){
-			economySeatVariable = economyUserChoice;
+	public void economySeatPicker(int userChoice){
+		if (userChoice >= 5 && userChoice <= 10){
+			ecoSeatVariable = userChoice;
 			System.out.println("Economy class seat purchased.");
 		}
 	}
 	
-	public int getFirstClassSeatResult(){
-		return firstClassSeatVariable;
+	public int getSeatResult(){
+		return seatVariable;
 	}
 	
-	public int getEconomySeatResults(){
-		return economySeatVariable;
+	public int getEcoSeatResult(){
+		return ecoSeatVariable;
 	}
 	
-	public void firstClassSeatArray(int[] seat, int seatType){
+	public void firstClassReservedSeat(int seatType){
 		if (seatType == 1){
-			for (int index = 0; index < 5; index ++){
-				if (seat[index] == 0){
-//					return index;
-					firstClassVariable = index;
-				}
-			}
+			availableAirlineSeat[firstClass] = 1;
+			firstClass++;
 		}
 	}
 	
-	public int getFirstClassArray(){
-		return firstClassSeatType;
+	public void economyReservedSeat(int seatType){
+		if(seatType == 2){
+			availableAirlineSeat[economy] = 2;
+			economy ++;
+		}
 	}
 	
+	public int returnFirstClassReservedSeat(){
+		return firstClass;
+	}
+	
+	public int returnEconomyReservedSeat(){
+		return economy;
+	}
 }

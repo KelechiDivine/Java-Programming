@@ -14,20 +14,38 @@ public class AirlineReservationsTest {
 	}
 
 	@Test
-	public void userPurchasedFirstClassSeat(){
+	public void purchasedFirstClassTicket(){
 		airlineReservations.firstClassSeatPicker(1);
-		Assertions.assertEquals(1, airlineReservations.getFirstClassSeatResult());
+		Assertions.assertEquals(1, airlineReservations.getSeatResult());
 	}
 	
 	@Test
-	public void userPurchasedEconomySeat(){
+	public void purchasedEconomyTicket(){
 		airlineReservations.economySeatPicker(6);
-		Assertions.assertEquals(6, airlineReservations.getEconomySeatResults());
+		Assertions.assertEquals(6, airlineReservations.getEcoSeatResult());
 	}
 	
 	@Test
-	public void firstClassUser(){
-		airlineReservations.firstClassSeatArray(1, 2);
-		Assertions.assertEquals();
+	public void firstClassReservedSeat(){
+		
+		airlineReservations.firstClassReservedSeat( 1);
+		airlineReservations.firstClassReservedSeat( 1);
+		airlineReservations.firstClassReservedSeat( 1);
+		airlineReservations.firstClassReservedSeat( 1);
+		airlineReservations.firstClassReservedSeat( 1);
+		
+		Assertions.assertEquals(5, airlineReservations.returnFirstClassReservedSeat());
+	}
+	
+	@Test
+	public void economyReservedSeat(){
+		
+		airlineReservations.economyReservedSeat(2);
+		airlineReservations.economyReservedSeat(2);
+		airlineReservations.economyReservedSeat(2);
+		airlineReservations.economyReservedSeat(2);
+		airlineReservations.economyReservedSeat(2);
+		
+		Assertions.assertEquals(5, airlineReservations.returnEconomyReservedSeat());
 	}
 }
