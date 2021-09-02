@@ -2,58 +2,48 @@ package chapterSeven.excercise;
 
 public class AirlineReservations {
 	
-	int[] availableAirlineSeat = new int[10];
+	boolean[] firstClass = new boolean[5];
+	boolean[] economyClass = new boolean[5];
+	int numbFirstClass = 0;
+	int numEconomy = 0;
+	boolean trueFirstClass = true;
 	
-	int planeSeatCapacity = 10;
-	int seatVariable;
-	int ecoSeatVariable;
-	int firstClassVariable;
-	int firstClassSeatType = -1;
-	private int firstClass;
-	private int economy;
-	
-	
-	public void firstClassSeatPicker(int userChoice) {
-		if (userChoice >= 0 && userChoice <= 5) {
-			seatVariable = userChoice;
-			System.out.println("First class seat purchased.");
+	public void bookAFlight(int passengerChoice) {
+		if (passengerChoice == 1) {
+			economyClass();
+		} else {
+			if (passengerChoice == 2) {
+				firstClass();
+			} else {
+				System.out.println("Invalid selection.");
+			}
 		}
 	}
 	
-	public void economySeatPicker(int userChoice){
-		if (userChoice >= 5 && userChoice <= 10){
-			ecoSeatVariable = userChoice;
-			System.out.println("Economy class seat purchased.");
+	public void firstClass() {
+		if (numbFirstClass < 5) {
+			for (int passengerIndex = 0; passengerIndex < firstClass.length; passengerIndex++) {
+				if (!firstClass[passengerIndex]) {
+					trueFirstClass = firstClass[passengerIndex];
+					System.out.println("First class seat number: " + (passengerIndex + 1));
+					numbFirstClass++;
+				}
+			}
 		}
 	}
-	
-	public int getSeatResult(){
-		return seatVariable;
+	public boolean returnFirstResult(){
+		return true;
 	}
 	
-	public int getEcoSeatResult(){
-		return ecoSeatVariable;
-	}
-	
-	public void firstClassReservedSeat(int seatType){
-		if (seatType == 1){
-			availableAirlineSeat[firstClass] = 1;
-			firstClass++;
+	public void economyClass() {
+		if (numEconomy < 5) {
+			for (int ecPassenger = 0; ecPassenger < economyClass.length; ecPassenger++) {
+				if (!economyClass[ecPassenger]) {
+					economyClass[ecPassenger] = true;
+					System.out.println("Economy class Seat number: " + (ecPassenger + 6));
+					numEconomy++;
+				}
+			}
 		}
-	}
-	
-	public void economyReservedSeat(int seatType){
-		if(seatType == 2){
-			availableAirlineSeat[economy] = 2;
-			economy ++;
-		}
-	}
-	
-	public int returnFirstClassReservedSeat(){
-		return firstClass;
-	}
-	
-	public int returnEconomyReservedSeat(){
-		return economy;
 	}
 }

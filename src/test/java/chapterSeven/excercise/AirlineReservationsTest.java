@@ -9,43 +9,18 @@ public class AirlineReservationsTest {
 	private AirlineReservations airlineReservations;
 	
 	@BeforeEach
-	public void SetUp(){
+	public void SetUp() {
 		airlineReservations = new AirlineReservations();
 	}
-
+	
 	@Test
-	public void purchasedFirstClassTicket(){
-		airlineReservations.firstClassSeatPicker(1);
-		Assertions.assertEquals(1, airlineReservations.getSeatResult());
+	public void bookAFight() {
+		airlineReservations.bookAFlight(1);
+		Assertions.assertTrue(airlineReservations.returnFirstResult());
 	}
 	
 	@Test
-	public void purchasedEconomyTicket(){
-		airlineReservations.economySeatPicker(6);
-		Assertions.assertEquals(6, airlineReservations.getEcoSeatResult());
-	}
+	public void test(){
 	
-	@Test
-	public void firstClassReservedSeat(){
-		
-		airlineReservations.firstClassReservedSeat( 1);
-		airlineReservations.firstClassReservedSeat( 1);
-		airlineReservations.firstClassReservedSeat( 1);
-		airlineReservations.firstClassReservedSeat( 1);
-		airlineReservations.firstClassReservedSeat( 1);
-		
-		Assertions.assertEquals(5, airlineReservations.returnFirstClassReservedSeat());
-	}
-	
-	@Test
-	public void economyReservedSeat(){
-		
-		airlineReservations.economyReservedSeat(2);
-		airlineReservations.economyReservedSeat(2);
-		airlineReservations.economyReservedSeat(2);
-		airlineReservations.economyReservedSeat(2);
-		airlineReservations.economyReservedSeat(2);
-		
-		Assertions.assertEquals(5, airlineReservations.returnEconomyReservedSeat());
 	}
 }
