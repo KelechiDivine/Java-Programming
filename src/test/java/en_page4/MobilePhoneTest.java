@@ -74,18 +74,19 @@ public class MobilePhoneTest {
 		Assertions.assertTrue(true);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@Test
+	public void testAddName_toDatabase(){
+		mobilePhone.addName_toDatabase("Kelechi");
+		mobilePhone.addName_toDatabase("Nonso");
+		mobilePhone.addName_toDatabase("ZipDemon");
+		mobilePhone.addName_toDatabase("Elizabeth");
+		mobilePhone.addName_toDatabase("Sam");
+		mobilePhone.addName_toDatabase("Ozi");
+		mobilePhone.addName_toDatabase("Chibuzor");
+		mobilePhone.addName_toDatabase("Billy");
+		mobilePhone.addName_toDatabase("Mofe");
+		mobilePhone.addName_toDatabase("Inem");
+		mobilePhone.addName_toDatabase("Mongo");
+		Assertions.assertTrue(true);
+	}
 }

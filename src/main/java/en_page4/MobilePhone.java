@@ -1,5 +1,10 @@
 package en_page4;
 
+import java.lang.reflect.Method;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class MobilePhone {
 	
 	public void search(){
@@ -49,5 +54,12 @@ public class MobilePhone {
 	
 	public void voice_tags() {
 		System.out.print("10: Voice Tags");
+	}
+	
+	
+	public void addName_toDatabase(String name){
+		Set<String> stringListOfName = new HashSet<String>();
+		stringListOfName.add(name);
+		System.out.println(name + " have been added to the database.");
 	}
 }
