@@ -23,4 +23,10 @@ public class ExampleTest {
 		Assertions.assertEquals(7, example.getSumResult());
 	}
 	
+	@Test
+	public void testIfUserEntersInvalidResult(){
+		example.addingTwoNumbers(4, 5);
+		Assertions.assertEquals(3, example.getSumResult());
+	}
+	
 }
