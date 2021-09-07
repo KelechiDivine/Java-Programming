@@ -1,11 +1,9 @@
 package en_page4;
 
-import java.lang.reflect.Method;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class MobilePhone {
+	
 	
 	public void search(){
 		System.out.print("1: Search");
@@ -61,5 +59,11 @@ public class MobilePhone {
 		Set<String> stringListOfName = new HashSet<String>();
 		stringListOfName.add(name);
 		System.out.println(name + " have been added to the database.");
+	}
+	
+	
+	public void searchName_inDatabase(String searchName) {
+		Optional<String> nameIsPresent = Optional.of("");
+		addName_toDatabase(searchName);
 	}
 }
