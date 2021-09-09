@@ -12,8 +12,8 @@ public class Human {
 	private String phoneNumber;
 
 //	By default java creates an empty constructor for every class you create
-
 //	An empty constructor
+
 //	Notice: That a constructor must have the same name as the class, and a constructor have no return type
 //	Just access modifier and the class name;
 	
@@ -27,5 +27,17 @@ public class Human {
 		this.age = age;
 		this.phoneNumber = phoneNumber;
 	}
+	
+//	The reason for this empty constructor is because when we create an object of this class
+//	we might choose not to give any argument
+//	for instance:
+
+//	private Human human;
+
+//	human  = new Human()
+
+//	what happened on line 37 is called instantiations... You can see the "Human()" has no argument
+//	That is the power of empty constructor.
+
 	
 }
