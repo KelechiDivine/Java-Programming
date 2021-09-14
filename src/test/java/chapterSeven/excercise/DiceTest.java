@@ -1,8 +1,6 @@
 package chapterSeven.excercise;
 
 
-import Registery.Exceptions.InputOutOfBoundException;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,8 +14,16 @@ public class DiceTest {
 	}
 	
 	@Test
-	public void rollSingleDice() throws InputOutOfBoundException {
-		dice.getFirstDice(2);
-		Assertions.assertEquals(2, dice.getRandom());
+	public void rollFirstDie_andShowTheNumberOutput() {
+		dice.rollFirstDie();
+	}
+	
+	@Test
+	public void rollSecondDie_andShowTheResult() {
+		dice.rollSecondDie();
+	}
+	
+	@Test void returnResultOfBothDie(){
+		dice.returnResultOfFirstDieAndSecondDie();
 	}
 }

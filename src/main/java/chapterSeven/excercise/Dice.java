@@ -1,26 +1,39 @@
 package chapterSeven.excercise;
 
-import Registery.Exceptions.InputOutOfBoundException;
-
 import java.security.SecureRandom;
 
 public class Dice {
 	
-	int[] firstDiceFace = new int[7];
+//	int[] firstDiceFace = new int[7];
 	
 	public int getRandom() {
 		SecureRandom random = new SecureRandom();
 		return random.nextInt(6) + 1;
 	}
 	
-	public void getFirstDice(int rollDice) throws InputOutOfBoundException {
-		if (rollDice > firstDiceFace[7]) {
-			throw new ArrayIndexOutOfBoundsException();
-		} else {
-			System.out.println();
-		}
+	public int rollFirstDie(){
+		int firstDie = getRandom();
+//		System.out.println("The first die number is " + firstDie);
+		
+		return firstDie;
 	}
 	
-//	public SecureRandom returnRolledDiceResult(){
-//		return random;
+	public int rollSecondDie(){
+		int secondDie = getRandom();
+//		System.out.println("The second die number is " + secondDie);
+		return secondDie;
 	}
+	
+	public void returnResultOfFirstDieAndSecondDie(){
+		int firstDieVariable = rollFirstDie();
+		int secondDieVariable = rollSecondDie();
+		int sumOfDice = firstDieVariable + secondDieVariable;
+		
+		System.out.println("First die number " + firstDieVariable);
+		System.out.println("Second die number is " + secondDieVariable);
+		System.out.println("The sum of the dice is " + sumOfDice);
+	}
+	
+	
+	
+}
