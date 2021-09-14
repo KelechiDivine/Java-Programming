@@ -18,6 +18,6 @@ public class DiceTest {
 	@Test
 	public void rollSingleDice() throws InputOutOfBoundException {
 		dice.getFirstDice(2);
-		Assertions.assertEquals(2, dice.returnRolledDiceResult());
+		Assertions.assertEquals(2, dice.getRandom());
 	}
 }

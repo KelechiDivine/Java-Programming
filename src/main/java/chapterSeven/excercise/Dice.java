@@ -6,24 +6,21 @@ import java.security.SecureRandom;
 
 public class Dice {
 	
+	int[] firstDiceFace = new int[7];
 	
-	SecureRandom random = new SecureRandom();
-	int[] firstDice = new int[7];
-	
-	public SecureRandom getRandom() {
-		random.nextInt(firstDice[7]);
-		return random;
+	public int getRandom() {
+		SecureRandom random = new SecureRandom();
+		return random.nextInt(6) + 1;
 	}
 	
 	public void getFirstDice(int rollDice) throws InputOutOfBoundException {
-		if (rollDice > firstDice[7]) {
+		if (rollDice > firstDiceFace[7]) {
 			throw new ArrayIndexOutOfBoundsException();
 		} else {
-			random.nextInt(rollDice);
+			System.out.println();
 		}
 	}
 	
-	public SecureRandom returnRolledDiceResult(){
-		return random;
+//	public SecureRandom returnRolledDiceResult(){
+//		return random;
 	}
-}
