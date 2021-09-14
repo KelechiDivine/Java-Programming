@@ -1,6 +1,7 @@
 package chapterSeven.excercise;
 
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,16 +15,13 @@ public class DiceTest {
 	}
 	
 	@Test
-	public void rollFirstDie_andShowTheNumberOutput() {
-		dice.rollFirstDie();
-	}
-	
-	@Test
-	public void rollSecondDie_andShowTheResult() {
-		dice.rollSecondDie();
-	}
-	
-	@Test void returnResultOfBothDie(){
-		dice.returnResultOfFirstDieAndSecondDie();
+	public void assertDieExist(){
+		
+		int firstDie = dice.rollDie();
+		int secondDie = dice.rollDie();
+		
+		Assertions.assertNotNull(firstDie);
+		Assertions.assertNotNull(secondDie);
+		
 	}
 }
