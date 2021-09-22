@@ -1,4 +1,4 @@
-package chapterNine;
+package chapterNine.example;
 
 public class CommissionEmployee extends Object{
 	
