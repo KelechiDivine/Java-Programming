@@ -1,4 +1,4 @@
-package chapterTen;
+package chapterTen.examples;
 
 public class SalariedEmployee extends Employee{
 	

@@ -1,4 +1,4 @@
-package chapterTen;
+package chapterTen.examples;
 
 public class HourlyEmployee extends  Employee{
 	
