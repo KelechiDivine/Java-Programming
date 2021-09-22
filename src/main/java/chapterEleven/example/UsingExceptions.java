@@ -6,7 +6,9 @@ public class UsingExceptions {
 		
 		try {
 			throwException();
-		} catch (Exception exception) {
+		}
+		
+		catch (Exception exception) {
 			System.err.println("Exception handled in main");
 		}
 		
@@ -16,9 +18,13 @@ public class UsingExceptions {
 	private static void doesNotThrowException() {
 		try {
 			System.out.println("Method doesNotThrowException");
-		} catch (Exception exception) {
+		}
+		
+		catch (Exception exception) {
 			System.err.println(exception);
-		} finally {
+		}
+		
+		finally {
 			System.err.println("Finally executed in doesNotThrowException");
 		}
 		
