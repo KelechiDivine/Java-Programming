@@ -6,7 +6,8 @@ public class HourlyEmployee extends  Employee{
 	private double hours;
 	
 	public HourlyEmployee(String firstName,
-						  String lastName, String socialSecurityNumber) {
+						  String lastName, String socialSecurityNumber,
+						  double wage, double hours) {
 		super(firstName, lastName, socialSecurityNumber);
 		
 		if (wage < 0.0){

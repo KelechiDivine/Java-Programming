@@ -1,6 +1,8 @@
 package chapterNine.example;
 
-public class CommissionEmployee extends Object{
+import chapterTen.examples.Employee;
+
+public class CommissionEmployee extends Employee {
 	
 	private final String firstName;
 	private final String lastName;
@@ -10,6 +12,7 @@ public class CommissionEmployee extends Object{
 	
 	public CommissionEmployee(String firstName,
 							  String lastName, String socialSecurityNumber, double grossSales, double commissionRate) {
+		super(firstName, lastName, socialSecurityNumber);
 		
 		if (grossSales < 0.0)
 			throw new IllegalArgumentException(
@@ -48,9 +51,9 @@ public class CommissionEmployee extends Object{
 		return commissionRate;
 	}
 	
-	public double earning(){
-		return commissionRate * grossSales;
-	}
+//	public double earning(){
+//		return commissionRate * grossSales;
+//	}
 	
 	@Override
 	public String toString() {
@@ -61,6 +64,11 @@ public class CommissionEmployee extends Object{
 				"gross sales", grossSales,
 				"commission rate", commissionRate
 		);
+	}
+	
+	@Override
+	public double earnings() {
+		return commissionRate * grossSales;
 	}
 	
 	public void setGrossSales(int i) {
