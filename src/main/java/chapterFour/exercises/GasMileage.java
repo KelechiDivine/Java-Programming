@@ -3,12 +3,12 @@ package chapterFour.exercises;
 public class GasMileage {
 	
 	int totalMilesDriven;
-	int totalGalloneUsed;
+	int totalGallonUsed;
 	
-	public GasMileage(int totalMilesDriven, int totalGalloneUsed) {
+	public GasMileage(int totalMilesDriven, int totalGallonUsed) {
 		
 		this.totalMilesDriven = totalMilesDriven;
-		this.totalGalloneUsed = totalGalloneUsed;
+		this.totalGallonUsed = totalGallonUsed;
 	}
 	
 	public int getTotalMilesDriven() {
@@ -19,23 +19,23 @@ public class GasMileage {
 		this.totalMilesDriven = totalMilesDriven;
 	}
 	
-	public int getTotalGalloneUsed() {
-		return totalGalloneUsed;
+	public int getTotalGallonUsed() {
+		return totalGallonUsed;
 	}
 	
-	public void setTotalGalloneUsed(int totalGalloneUsed) {
-		this.totalGalloneUsed = totalGalloneUsed;
+	public void setTotalGallonUsed(int totalGallonUsed) {
+		this.totalGallonUsed = totalGallonUsed;
 	}
 	
 	public double getMilesPerGallonObtain(int miles, int gallons){
 		totalMilesDriven  = totalMilesDriven + miles;
-		totalGalloneUsed = totalGalloneUsed + gallons;
+		totalGallonUsed = totalGallonUsed + gallons;
 		
 		return miles  / (double) gallons;
 		
 	}
 	
 	public int getTotalMPG(){
-		return totalGalloneUsed /getTotalMilesDriven();
+		return totalGallonUsed /getTotalMilesDriven();
 	}
 }

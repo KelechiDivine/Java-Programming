@@ -38,7 +38,7 @@ public class GasMileageTest {
 		System.out.println("COMBINED TOTAL Miles Per Gallons");
 		
 		System.out.printf("Combined mileage: %2d\nCombined gallon useage: %2d\n",
-				gasMileage.getTotalMilesDriven(), gasMileage.getTotalGalloneUsed());
+				gasMileage.getTotalMilesDriven(), gasMileage.getTotalGallonUsed());
 		
 		System.out.printf("Your combined Miles per Gallon for all trips is: %2d\n", gasMileage.getTotalMPG());
 	}
