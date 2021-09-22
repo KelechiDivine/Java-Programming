@@ -62,4 +62,11 @@ public class CommissionEmployee extends Object{
 				"commission rate", commissionRate
 		);
 	}
+	
+	public void setGrossSales(int i) {
+	
+	}
+	
+	public void setCommissionRate(double v) {
+	}
 }

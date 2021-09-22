@@ -28,6 +28,7 @@ public class CommissionEmployeeTest {
 		System.out.printf("%n%s %s%n" +
 				"commission rate is ", commissionEmployee.getCommissionRate());
 		
-//		commissionEmployee.set
+		commissionEmployee.setGrossSales(5000);
+		commissionEmployee.setCommissionRate(.1);
 	}
 }
