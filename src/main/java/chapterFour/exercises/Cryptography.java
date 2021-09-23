@@ -4,7 +4,8 @@ public class Cryptography {
 	
 	public void fourNumbersEncrypting(int firstInteger, int secondInteger,
 									  int thirdInteger, int fourthInteger){
-		
+
+		// add 7 to digit logic
 		int firstResult = firstInteger + 7;
 		int secondResult = secondInteger + 7;
 		int thirdResult = thirdInteger + 7;
