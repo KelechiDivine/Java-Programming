@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class TuringTest {
 	
 	private Turing turing;
@@ -23,8 +21,8 @@ public class TuringTest {
 	
 	@Test
 	public void assertCalPoints_willExecute(){
-		turing.calPoints(new String[]{"5", "2", "D", "C", "+"});
-		Assertions.assertTrue(true);
+		int y = turing.calPoints(new String[]{"5", "2", "D", "C", "+"});
+		Assertions.assertEquals(30, y);
 	}
 
 }
