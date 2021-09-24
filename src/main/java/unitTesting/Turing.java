@@ -31,7 +31,7 @@ public class Turing {
 		for(int number : arrayList){
 			total += number;
 		}
-		System.out.println("The total " + total);
+		System.out.println("The total is: " + total);
 		return total;
 	}
 }
