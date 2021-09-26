@@ -7,34 +7,34 @@ public class CAI {
 	SecureRandom secureRandom;
 	private int val;
 	
-	public int firstRandom() {
+	public int firstRandomNumberGenerator() {
 		secureRandom = new SecureRandom();
 		return secureRandom.nextInt(10) +1;
 	}
 	
-	public int secondRandom(){
+	public int secondRandomNumberGenerator(){
 		secureRandom = new SecureRandom();
 		return secureRandom.nextInt(10) + 1;
 	}
 	
-	public int calc(){
-		return firstRandom() * secondRandom();
+	public int getSecuredRandomResult(){
+		return firstRandomNumberGenerator() * secondRandomNumberGenerator();
 	}
 	
-	public void getUserAnswer_andCompareItWithInitialAnswer(int userAnswer) {
+	public void compareUserAnswerWithInitialAnswer(int userAnswer) {
 		val = userAnswer;
 		
-		if (val == calc()) {
+		if (val == getSecuredRandomResult()) {
 			System.out.println("Good job.");
 		} else {
-			if (val != calc()){
+			if (val != getSecuredRandomResult()){
 				System.out.println("Failed!! Try again.");
 			}
 		}
 	}
 	
-	public int why(){
-		System.out.println("The answer is: " + calc());
+	public int getAnswer(){
+		System.out.println("The answer is: " + getSecuredRandomResult());
 		return val;
 	}
 }

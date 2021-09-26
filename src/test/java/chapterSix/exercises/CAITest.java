@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.security.SecureRandom;
 
 public class CAITest {
 	
@@ -26,7 +25,7 @@ public class CAITest {
 	
 	@Test
 	public void askQuestion() {
-		cai.getUserAnswer_andCompareItWithInitialAnswer(40);
-		Assertions.assertEquals(40, cai.why());
+		cai.compareUserAnswerWithInitialAnswer(40);
+		Assertions.assertEquals(40, cai.getAnswer());
 	}
 }
