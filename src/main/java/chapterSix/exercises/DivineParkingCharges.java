@@ -6,7 +6,6 @@ import java.util.List;
 public class DivineParkingCharges {
 	
 	
-	// all time are calculated in hours
 	
 	private double minimumAmountPayedForParking = 2;
 	
