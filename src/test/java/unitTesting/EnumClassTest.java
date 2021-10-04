@@ -1,5 +1,6 @@
 package unitTesting;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +17,7 @@ class EnumClassTest {
 	
 		EnumClass.Days days = EnumClass.Days.Sunday;
 		System.out.print("Days enum inside the class is set a value: " + days);
-		assertEquals(EnumClass.Days.valueOf("Sunday"), days);
+		Assertions.assertEquals(EnumClass.Days.valueOf("Sunday"), days);
 		
 	}
 }
