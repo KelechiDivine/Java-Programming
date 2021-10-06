@@ -30,5 +30,5 @@ Don't pass boolean in your functions. Make sure your code isn't surprising
 	   comment as a resort
 
 Let all your local variable begin with 'a'(aDate)
-All of the arguement to a function begins with a 'var' (varFirstnumber)
+All of the argument to a function begins with a 'var' (varFirstNumber)
 All instance variable begin with 'its' (itsBoy)
