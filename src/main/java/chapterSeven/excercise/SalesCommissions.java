@@ -12,9 +12,8 @@ public class SalesCommissions {
 			salary = dollar * 0.09 + 200;
 			range = (int) salary / 100;
 			
-			if (range > 10){
+			if (range > 10)
 				range = 10;
-			}
 			
 			++total[range - 2];
 		}
