@@ -2,21 +2,24 @@ package Microsoft;
 
 public class Solution {
 	
-	public int diagonalDifference(int[][] arr, int n){
+	public Solution(){
+		System.out.println("This class is not null...");
+	}
+	public int isDiagonal(int[][] arrayOfArray, int nthLengthOfArray){
 		
 		int firstDiagonal  = 0;
 		int secondDiagonal = 0;
 		
-		for (int i  = 0; i < n; i++){
-			for (int j = 0; j < n; j++) {
+		for (int i  = 0; i < nthLengthOfArray; i++){
+			for (int j = 0; j < nthLengthOfArray; j++) {
 			
 //				find sum of first diagonal.
 				if (i == j)
-					firstDiagonal += arr[i][j];
+					firstDiagonal += arrayOfArray[i][j];
 				
 //				find sum of second diagonal
-				if (i == n - j - 1)
-					secondDiagonal += arr[i][j];
+				if (i == nthLengthOfArray - j - 1)
+					secondDiagonal += arrayOfArray[i][j];
 			}
 		}
 		

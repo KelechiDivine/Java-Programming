@@ -16,15 +16,21 @@ public class SolutionTest {
 	}
 	
 	@Test
+	public void test_diagonalDifferenceExist(){
+		solution = new Solution();
+		Assertions.assertNotNull(solution, "Class doesn't exist");
+	}
+	
+	@Test
 	public void test_diagonalDifference(){
-		int y = solution.diagonalDifference(new int[][]{{11, 2, 4}, {4 , 5, 6}, {10, 8, -12}}, 3);
+		int y = solution.isDiagonal(new int[][]{{11, 2, 4}, {4 , 5, 6}, {10, 8, -12}}, 3);
 		Assertions.assertEquals(15, y);
 		
 	}
 	
 	@Test
 	public void test_nextDialogDifference(){
-		int x = solution.diagonalDifference(new int[][]{{10, 3, 5}, {5, 34, 4}, {-12, 4, 6}}, 3);
+		int x = solution.isDiagonal(new int[][]{{10, 3, 5}, {5, 34, 4}, {-12, 4, 6}}, 3);
 		Assertions.assertEquals(23, x);
 	}
 
