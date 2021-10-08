@@ -29,9 +29,20 @@ public class SolutionTest {
 	}
 	
 	@Test
-	public void test_nextDialogDifference(){
-		int x = solution.isDiagonal(new int[][]{{10, 3, 5}, {5, 34, 4}, {-12, 4, 6}}, 3);
-		Assertions.assertEquals(23, x);
+	public void test_aColumnDiagonalDifference(){
+		int x = solution.isDiagonal(new int[][]{{10, 3, 5}}, 1);
+		Assertions.assertEquals(0, x);
 	}
-
+	
+	@Test
+	public void test_TwoColumnDiagonalDifference(){
+		int x = solution.isDiagonal(new int[][]{{10, 3, 5}, {5, 34, 4}}, 2);
+		Assertions.assertEquals(36, x);
+	}
+	
+	@Test
+	public void test_threeColumnDialogDifference(){
+		int x = solution.isDiagonal(new int[][]{{10, 3, 5}, {-12, 4, 6}, {33,54,3}}, 3);
+		Assertions.assertEquals(25, x);
+	}
 }
