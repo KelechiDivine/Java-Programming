@@ -1,61 +1,63 @@
 package chapterSeven.excercise;
 
+
+import java.util.ArrayList;
+
 public class AirlineReservations {
-//
-//	boolean[] firstClass = new boolean[5];
-//	boolean[] economyClass = new boolean[5];
-//	int numbFirstClass = 0;
-//	int numEconomy = 0;
-//	boolean trueFirstClass = true;
-//
-//	public void bookAFlight(int passengerChoice) {
-//		if (passengerChoice == 1) {
-//			economyClass();
-//		} else {
-//			if (passengerChoice == 2) {
-//				firstClass();
-//			} else {
-//				System.out.println("Invalid selection.");
-//			}
-//		}
-//	}
-//
-//	public void firstClass() {
-//		if (numbFirstClass < 5) {
-//			for (int passengerIndex = 0; passengerIndex < firstClass.length; passengerIndex++) {
-//				if (!firstClass[passengerIndex]) {
-//					trueFirstClass = firstClass[passengerIndex];
-//					System.out.println("First class seat number: " + (passengerIndex + 1));
-//					numbFirstClass++;
-//				}
-//			}
-//		}
-//	}
-//	public boolean returnFirstResult(){
-//		return true;
-//	}
-//
-//	public void economyClass() {
-//		if (numEconomy < 5) {
-//			for (int ecPassenger = 0; ecPassenger < economyClass.length; ecPassenger++) {
-//				if (!economyClass[ecPassenger]) {
-//					economyClass[ecPassenger] = true;
-//					System.out.println("Economy class Seat number: " + (ecPassenger + 6));
-//					numEconomy++;
-//				}
-//			}
-//		}
-//	}
 	
-	private int[] firstClass;
-	private int [] economy;
+	private final int[] firstClassSeat = new int[]{1, 2, 3, 4, 5};
+	private final int[] economySeat = new int[]{6, 7, 8, 9, 10};
 	
-	public void registerSeat(int n){
-		if (n == 1)
-			System.out.println("Congratulations!! You've just purchased a seat from the first class.");
-			
-		if (n == 2)
-			System.out.println("You've just purchased a seat from the economy class.");
+	public void receiveWelcomeMessage(){
+		System.out.println("Hi valued customer. Thanks for booking a ticket with us. We wish you a nice flight.");
+	}
+	
+	public String registerPassenger(String passengerLastName, String passengerFirstName) {
+		String nameVar = passengerLastName + passengerFirstName;
+		receiveWelcomeMessage();
+		return nameVar;
+	}
+	
+	public void displayFirstClassSeat() {
+		System.out.println("			Available First class seat");
+		System.out.println("		----------------------------------");
 		
+		for (int i = 1; i <= firstClassSeat.length; i++) {
+			System.out.printf("seat No_: %d%n", i);
+		}
+	}
+	
+	public void displayEconomySeat(){
+		System.out.println("			Available Economy seat");
+		System.out.println("		------------------------------");
+		for (int j = 1; j <= economySeat.length; j++){
+			System.out.printf("seat No_: %d%n", j);
+		}
+	}
+	
+	public int registerSeatForFirstClassPassenger(int firstClassChoice){
+	
+		if (firstClassChoice > firstClassSeat.length){
+			throw new IndexOutOfBoundsException("First class doesn't have seat reserved.");
+		}
+		
+		ArrayList<Integer> arrayList = new ArrayList<>();
+		
+		if (firstClassChoice == firstClassSeat[0] && firstClassChoice == firstClassSeat[1] &&
+				firstClassChoice == firstClassSeat[2] && firstClassChoice == firstClassSeat[3] &&
+				firstClassChoice == firstClassSeat[4]) {
+			arrayList.add(firstClassSeat[0]);
+			arrayList.add(firstClassSeat[1]);
+			arrayList.add(firstClassSeat[2]);
+			arrayList.add(firstClassSeat[3]);
+			arrayList.add(firstClassSeat[4]);
+			System.out.println("Added successfully");
+		}
+		
+		return firstClassChoice;
+	}
+	
+	public void init(){
+	
 	}
 }
