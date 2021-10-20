@@ -48,5 +48,4 @@ public class AirlineReservationsTest {
 		int v = airlineReservations.registerSeatForFirstClassPassenger(9);
 		Assertions.assertEquals(v, 9);
 	}
-
 }

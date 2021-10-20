@@ -51,7 +51,6 @@ public class AirlineReservations {
 			arrayList.add(firstClassSeat[2]);
 			arrayList.add(firstClassSeat[3]);
 			arrayList.add(firstClassSeat[4]);
-			System.out.println("Added successfully");
 		}
 		
 		return firstClassChoice;
