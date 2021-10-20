@@ -25,83 +25,28 @@ public class StudentServiceImplementation implements StudentService{
 	
 	@Override
 	public StudentModel updateStudent(StudentModel studentModel) {
+		studentRepository.updateStudent(studentModel);
 		return null;
 	}
 	
 	@Override
 	public void save(StudentModel studentModel) {
-	
+		studentRepository.save(studentModel);
 	}
 	
 	@Override
 	public List<StudentModel> findAll() {
+		studentRepository.findAll();
 		return null;
 	}
 	
 	@Override
 	public void deleteById(int id) {
-	
+		studentRepository.deleteById(id);
 	}
 	
 	@Override
 	public void deleteByPhoneNumber(String phoneNumber) {
 		StudentService.super.deleteByPhoneNumber(phoneNumber);
 	}
-
-//	private StudentRepository studentRepository;
-//
-//	@Override
-//	public void registerStudent(StudentModel newStudent) {
-//		if (studentDatabase.isEmpty()){
-//			studentDatabase.add(newStudent);
-//		}
-//	}
-//
-//	@Override
-//	public String findStudentByEmail(String studentEmail) throws StudentException {
-//		if (studentDatabase.contains(studentEmail)) {
-//			st.getEmail();
-//		} else {
-//			throw new StudentException();
-//		}
-//		return st.getEmail();
-//	}
-//
-//	@Override
-//	public int findById(int studentId) throws StudentException {
-//		if (studentDatabase.contains(studentId)){
-//			st.getId();
-//		}
-//		else {
-//			throw new StudentException();
-//		}
-//		return st.getId();
-//	}
-//
-//	@Override
-//	public void updateStudent(StudentModel studentModel) {
-//		studentModel.setId(studentModel.getId());
-//		studentModel.setFirstName(studentModel.getFirstName());
-//		studentModel.setLastName(studentModel.getLastName());
-//		studentModel.setAddress(studentModel.getAddress());
-//		save(studentModel);
-//	}
-//
-//	@Override
-//	public void save(StudentModel studentModel) {}
-//
-//	@Override
-//	public void deleteById(int id) {
-//		studentDatabase.remove(id);
-//	}
-//
-//	@Override
-//	public void deleteByEmail(String email) {
-//		studentDatabase.remove(email);
-//	}
-//
-//	@Override
-//	public void deleteByPhoneNumber(String phoneNumber) {
-//		studentDatabase.remove(phoneNumber);
-//	}
 }
