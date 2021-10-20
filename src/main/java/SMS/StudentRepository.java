@@ -23,7 +23,6 @@ public class StudentRepository{
 	public StudentModel deleteById(int id){
 		StudentModel studentModel = findById(id);
 		database.remove(studentModel);
-		
 		return null;
 	}
 	
@@ -37,7 +36,18 @@ public class StudentRepository{
 	public StudentModel deleteAll(){
 		StudentModel model = findAll();
 		database.remove(model);
-		
 		return null;
+	}
+	
+	public StudentModel updateStudent(StudentModel studentModel){
+		studentModel.setPhoneNumber(studentModel.getPhoneNumber());
+		studentModel.setEmail(studentModel.getEmail());
+		studentModel.setFirstName(studentModel.getFirstName());
+		studentModel.setLastName(studentModel.getLastName());
+		studentModel.setAddress(studentModel.getAddress());
+		studentModel.setId(studentModel.getId());
+		save(studentModel);
+		
+		return studentModel;
 	}
 }
