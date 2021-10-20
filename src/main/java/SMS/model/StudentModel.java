@@ -1,12 +1,7 @@
 package SMS.model;
 
-//import java.security.SecureRandom;
-
-import java.util.ArrayList;
-
 public class StudentModel {
 
-//	auto generate id for a client
 	private int id;
 	
 	private String firstName;

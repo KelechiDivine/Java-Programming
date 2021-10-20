@@ -1,52 +1,43 @@
 package SMS;
 
 import SMS.model.StudentModel;
-import SMS.model.StudentService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentRepository implements StudentService {
+public class StudentRepository{
 	
-	@Override
-	public void registerStudent(StudentModel newStudent) {
-		if (studentDatabase.isEmpty()){
-			studentDatabase.add(newStudent);
-		}
+	List<StudentModel> database = new ArrayList<>();
+	
+	public void save(StudentModel newStudent) {
+		database.add(newStudent);
 	}
 	
-	@Override
-	public String findStudentByEmail(String studentEmail) throws StudentException {
+	public StudentModel findById(int id) {
+		for (int i= 1; i <= database.size(); i++){
+			database.get(id);
+		}
 		return null;
 	}
 	
-	@Override
-	public int findById(int studentId) throws StudentException {
-		return 0;
+	public StudentModel deleteById(int id){
+		StudentModel studentModel = findById(id);
+		database.remove(studentModel);
+		
+		return null;
 	}
 	
-	@Override
-	public void updateStudent(StudentModel studentModel) {
+	public StudentModel findAll(){
+		for (int i= 1; i <= database.size(); i++){
+			database.listIterator();
+		}
+			return null;
+		}
 	
-	}
-	
-	@Override
-	public void save(StudentModel studentModel) {
-	
-	}
-	
-	@Override
-	public void deleteById(int id) {
-	
-	}
-	
-	@Override
-	public void deleteByEmail(String email) {
-	
-	}
-	
-	@Override
-	public void deleteByPhoneNumber(String phoneNumber) {
-	
+	public StudentModel deleteAll(){
+		StudentModel model = findAll();
+		database.remove(model);
+		
+		return null;
 	}
 }

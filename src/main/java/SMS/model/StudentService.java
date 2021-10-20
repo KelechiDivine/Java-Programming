@@ -1,57 +1,23 @@
 package SMS.model;
 
-import SMS.StudentException;
-
-import java.util.ArrayList;
 import java.util.List;
 
+
 public interface StudentService {
-	
-	StudentModel st = new StudentModel();
-	
-	List<StudentModel> studentDatabase = new ArrayList<>();
-	
+
 	default void registerStudent(StudentModel newStudent){}
 	
+	StudentModel findStudentByEmail(String studentEmail);
 	
-	default String findStudentByEmail(String studentEmail) throws StudentException {
-		if (studentDatabase.contains(studentEmail)) {
-			st.getEmail();
-		} else {
-			throw new StudentException();
-		}
-		return st.getEmail();
-	}
+	StudentModel findById(int studentId);
 	
-	default int findById(int studentId) throws StudentException {
-		if (studentDatabase.contains(studentId)){
-			st.getId();
-		}
-		else {
-			throw new StudentException();
-		}
-		return st.getId();
-	}
+	StudentModel updateStudent(StudentModel studentModel);
 	
-	default void updateStudent(StudentModel studentModel){
-		studentModel.setId(studentModel.getId());
-		studentModel.setFirstName(studentModel.getFirstName());
-		studentModel.setLastName(studentModel.getLastName());
-		studentModel.setAddress(studentModel.getAddress());
-		save(studentModel);
-	}
+	void save(StudentModel studentModel);
 	
-	 void save(StudentModel studentModel);
+	List<StudentModel> findAll();
 	
-	default void deleteById(int id){
-		studentDatabase.remove(id);
-	}
+	void deleteById(int id);
 	
-	default void deleteByEmail(String email) {
-		studentDatabase.remove(email);
-	}
-	
-	default void deleteByPhoneNumber(String phoneNumber){
-		studentDatabase.remove(phoneNumber);
-	}
+	default void deleteByPhoneNumber(String phoneNumber){}
 }
