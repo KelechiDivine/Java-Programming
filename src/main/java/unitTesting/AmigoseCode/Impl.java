@@ -8,8 +8,8 @@ public class Impl implements InheritanceWithInterface{
 	@Override
 	public void add(String name) {}
 	
-	@Override
-	public void find(String name) {}
+//	@Override
+//	public void find(String name) {}
 	
 	@Override
 	public void create(String name) {}

@@ -5,17 +5,17 @@ import java.util.List;
 
 public interface StudentService {
 
-	default void registerStudent(StudentModel newStudent){}
+	default void registerStudent(Student newStudent){}
 	
-	StudentModel findStudentByEmail(String studentEmail);
+	Student findStudentByEmail(String studentEmail);
 	
-	StudentModel findById(int studentId);
+	Student findById(int studentId);
 	
-	StudentModel updateStudent(StudentModel studentModel);
+	Student updateStudent(Student student);
 	
-	void save(StudentModel studentModel);
+	void save(Student student);
 	
-	List<StudentModel> findAll();
+	List<Student> findAll();
 	
 	void deleteById(int id);
 	

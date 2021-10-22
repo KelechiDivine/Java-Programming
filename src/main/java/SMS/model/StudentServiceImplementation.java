@@ -9,33 +9,33 @@ public class StudentServiceImplementation implements StudentService{
 	private StudentRepository studentRepository;
 	
 	@Override
-	public void registerStudent(StudentModel newStudent) {
+	public void registerStudent(Student newStudent) {
 		studentRepository.save(newStudent);
 	}
 	
 	@Override
-	public StudentModel findStudentByEmail(String studentEmail){
+	public Student findStudentByEmail(String studentEmail){
 		return null;
 	}
 	
 	@Override
-	public StudentModel findById(int studentId) {
+	public Student findById(int studentId) {
 		return studentRepository.findById(studentId);
 	}
 	
 	@Override
-	public StudentModel updateStudent(StudentModel studentModel) {
-		studentRepository.updateStudent(studentModel);
+	public Student updateStudent(Student student) {
+		studentRepository.updateStudent(student);
 		return null;
 	}
 	
 	@Override
-	public void save(StudentModel studentModel) {
-		studentRepository.save(studentModel);
+	public void save(Student student) {
+		studentRepository.save(student);
 	}
 	
 	@Override
-	public List<StudentModel> findAll() {
+	public List<Student> findAll() {
 		studentRepository.findAll();
 		return null;
 	}

@@ -1,6 +1,6 @@
 package SMS.model;
 
-public class StudentModel {
+public class Student {
 
 	private int id;
 	
