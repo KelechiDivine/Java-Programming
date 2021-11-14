@@ -21,8 +21,8 @@ public class AirlineReservationsTest {
 	
 	@Test
 	public void test_registerPassenger(){
-		String v = airlineReservations.registerPassenger("Lanre ", "Kenny");
-		Assertions.assertNotNull(v);
+		 db = airlineReservations.registerPassenger("Lanre ", "Kenny");
+		Assertions.assertNotNull(db);
 	}
 	
 	@Test

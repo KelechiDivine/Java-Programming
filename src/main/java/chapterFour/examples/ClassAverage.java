@@ -1,6 +1,5 @@
 package chapterFour.examples;
 
-import java.util.Scanner;
 
 public class ClassAverage {
 
@@ -8,10 +7,9 @@ public class ClassAverage {
 	
 		Scanner userInput = new Scanner(System.in);
 		
-		//Set the total to zero
 		int total = 0;
-		
-		//Set the counter to one
+
+		String firstStudentName = "";
 		int counter = 1;
 		
 		while (counter <= 3){
