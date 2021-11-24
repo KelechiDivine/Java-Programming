@@ -4,20 +4,55 @@ package chapterSeven.excercise;
 import java.util.ArrayList;
 
 public class AirlineReservations {
-	
-	private final int[] firstClassSeat = new int[]{1, 2, 3, 4, 5};
-	private final int[] economySeat = new int[]{6, 7, 8, 9, 10};
-	
+
+	private final boolean[] totalNumberOfPassengerSeat = new boolean[10];
+
 	public void receiveWelcomeMessage(){
 		System.out.println("Hi valued customer. Thanks for booking a ticket with us. We wish you a nice flight.");
 	}
-	
-	public String registerPassenger(String passengerLastName, String passengerFirstName) {
-		String nameVar = passengerLastName + passengerFirstName;
-		receiveWelcomeMessage();
-		return nameVar;
+
+	public boolean assignSeatToPassenger(String choice){
+		boolean firstClassSeat = true;
+		if (choice.equals("first") && getSeat(choice) > 0){
+			for (int index = 0; index < 5; index++){
+				if (!totalNumberOfPassengerSeat[index]){
+					firstClassSeat = totalNumberOfPassengerSeat[index];
+					printBoardingPass(index);
+					return true;
+				}
+			}
+		}
+
+		else {
+			boolean economySeat = true;
+			if (choice.equals("economy")) {
+				if (getSeat(choice) > 0) {
+					for (int index = 5; index < totalNumberOfPassengerSeat.length; index++) {
+						if (!totalNumberOfPassengerSeat[index]) {
+							economySeat = totalNumberOfPassengerSeat[index];
+							printBoardingPass(index);
+							return true;
+						}
+					}
+				}
+			}
+			//TODO: Check if it is OK to assign seat to a passenger's choice , if seat is full.
+
+			System.out.printf("All seat in section \"%s\" are booked. \n", choice);
+			System.out.printf("Would you like to be moved to section \"%s\" (y/n)", (choice.equals("first") ? "economy" : "first"));
+			passengersResponse(choice);
+
+		}
+		return false;
 	}
-	
+	private void printBoardingPass(int index) {
+
+	}
+
+	private int getSeat(String choice) {
+		return 0;
+	}
+
 	public void displayFirstClassSeat() {
 		System.out.println("			Available First class seat");
 		System.out.println("		----------------------------------");
