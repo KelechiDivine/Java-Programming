@@ -1,97 +1,91 @@
 package chapterSeven.excercise;
 
-
-import java.util.ArrayList;
-
 public class AirlineReservations {
 
-	private final boolean[] totalNumberOfPassengerSeat = new boolean[10];
+	private final boolean[] totalNumberOfPassengersSeat = new boolean[10];
 
-	public void receiveWelcomeMessage(){
-		System.out.println("Hi valued customer. Thanks for booking a ticket with us. We wish you a nice flight.");
+//	TODO: If customers book a flight, send a welcome message.
+	public String sendWelcomeMessageToCustomers(){
+		String message = "Hi valued customer. Thanks for booking a ticket with us. We wish you a nice flight.";
+		System.out.println(message);
+		return message;
 	}
 
-	public boolean assignSeatToPassenger(String choice){
-		boolean firstClassSeat = true;
-		if (choice.equals("first") && getSeat(choice) > 0){
-			for (int index = 0; index < 5; index++){
-				if (!totalNumberOfPassengerSeat[index]){
-					firstClassSeat = totalNumberOfPassengerSeat[index];
-					printBoardingPass(index);
-					return true;
-				}
-			}
-		}
-
-		else {
-			boolean economySeat = true;
-			if (choice.equals("economy")) {
-				if (getSeat(choice) > 0) {
-					for (int index = 5; index < totalNumberOfPassengerSeat.length; index++) {
-						if (!totalNumberOfPassengerSeat[index]) {
-							economySeat = totalNumberOfPassengerSeat[index];
-							printBoardingPass(index);
-							return true;
-						}
+//	TODO: Create first class customer seat reservation.
+	public boolean createFirstClassCustomersSeatReservation(String customersChoice){
+		if (customersChoice.equals("firstClass")){
+			System.out.println(customersChoice);
+			if (assignSeatForFirstClassPassenger(customersChoice) > 0){
+				for (int seatIndex = 0; seatIndex < 5; seatIndex++){
+					if (!totalNumberOfPassengersSeat[seatIndex]){
+						System.out.println(seatIndex);
+						totalNumberOfPassengersSeat[seatIndex] = true;
+						displayBoardInformation(seatIndex);
+						return true;
 					}
 				}
 			}
-			//TODO: Check if it is OK to assign seat to a passenger's choice , if seat is full.
-
-			System.out.printf("All seat in section \"%s\" are booked. \n", choice);
-			System.out.printf("Would you like to be moved to section \"%s\" (y/n)", (choice.equals("first") ? "economy" : "first"));
-			passengersResponse(choice);
-
 		}
 		return false;
 	}
-	private void printBoardingPass(int index) {
 
+//	TODO: Create economy customer seat reservation.
+	public boolean createEconomyCustomersSeatReservation(String customersChoice){
+		if (customersChoice.equals("economy")){
+			if (assignSeatToEconomyCustomer(customersChoice) > 0){
+				System.out.println(customersChoice);
+				for (int seatIndex = 5; seatIndex < totalNumberOfPassengersSeat.length; seatIndex++){
+					if (!totalNumberOfPassengersSeat[seatIndex]){
+						System.out.println(seatIndex);
+						totalNumberOfPassengersSeat[seatIndex] = true;
+						displayBoardInformation(seatIndex);
+						return true;
+					}
+				}
+			}
+		}
+		return false;
 	}
 
-	private int getSeat(String choice) {
-		return 0;
+//	TODO: Print board information about airline.
+	public void displayBoardInformation(int seatIndex) {
+		System.out.println("\nBoarding pass for crap Airline.");
+		System.out.printf("\nSECTION: %s\nSEAT NUMBER: %d\n\n\n",
+				(seatIndex < 5) ? "firstClass": "economy", seatIndex + 1);
 	}
 
-	public void displayFirstClassSeat() {
-		System.out.println("			Available First class seat");
-		System.out.println("		----------------------------------");
-		
-		for (int i = 1; i <= firstClassSeat.length; i++) {
-			System.out.printf("seat No_: %d%n", i);
+//	TODO: Assign a seat for firstClass passenger logic.
+	public int assignSeatForFirstClassPassenger(String firstClassCustomersChoice) {
+		int totalNumberOfFirstClassSeat = 0;
+
+		if (firstClassCustomersChoice.equals("firstClass")){
+			for (int hasAReservedFirstClassSeat = 0; hasAReservedFirstClassSeat < 5; hasAReservedFirstClassSeat++){
+				if (!totalNumberOfPassengersSeat[hasAReservedFirstClassSeat])
+					totalNumberOfFirstClassSeat += 1;
+				System.out.println(totalNumberOfFirstClassSeat +=1);
+			}
 		}
+		return totalNumberOfFirstClassSeat;
 	}
-	
-	public void displayEconomySeat(){
-		System.out.println("			Available Economy seat");
-		System.out.println("		------------------------------");
-		for (int j = 1; j <= economySeat.length; j++){
-			System.out.printf("seat No_: %d%n", j);
+
+//	TODO: Assign a seat for economy passenger logic
+	public int assignSeatToEconomyCustomer(String economyCustomersChoice){
+		int totalNumberOfEconomySeat = 5;
+
+		if (economyCustomersChoice.equals("economy")){
+			for (int hasAReservedEconomySeat = 5; hasAReservedEconomySeat < totalNumberOfPassengersSeat.length; hasAReservedEconomySeat++){
+				if (!totalNumberOfPassengersSeat[hasAReservedEconomySeat])
+					totalNumberOfEconomySeat += 1;
+			}
 		}
+		return totalNumberOfEconomySeat;
 	}
-	
-	public int registerSeatForFirstClassPassenger(int firstClassChoice){
-	
-		if (firstClassChoice > firstClassSeat.length){
-			throw new IndexOutOfBoundsException("First class doesn't have seat reserved.");
+
+//	TODO: See whether or not if all seat are booked.
+	public boolean checkIfSeatIsAvailableOrNot(){
+		for (boolean seatIsNotEmpty : totalNumberOfPassengersSeat) {
+			return !seatIsNotEmpty;
 		}
-		
-		ArrayList<Integer> arrayList = new ArrayList<>();
-		
-		if (firstClassChoice == firstClassSeat[0] && firstClassChoice == firstClassSeat[1] &&
-				firstClassChoice == firstClassSeat[2] && firstClassChoice == firstClassSeat[3] &&
-				firstClassChoice == firstClassSeat[4]) {
-			arrayList.add(firstClassSeat[0]);
-			arrayList.add(firstClassSeat[1]);
-			arrayList.add(firstClassSeat[2]);
-			arrayList.add(firstClassSeat[3]);
-			arrayList.add(firstClassSeat[4]);
-		}
-		
-		return firstClassChoice;
-	}
-	
-	public void init(){
-	
+		return false;
 	}
 }
