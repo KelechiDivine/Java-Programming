@@ -1,5 +1,6 @@
 package hackerRank;
 
+import hackerRank.Exception.HackerException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
@@ -21,9 +22,17 @@ public class JuliaCodingChallengeTest {
     }
 
     @Test
-    public void test_canDisplayHackersInformationInTableFormat() throws Exception {
+    public void test_canDisplayHackersInformationInTableFormat(){
         JuliaCodingChallenge juliaCodingChallenge = new JuliaCodingChallenge();
         juliaCodingChallenge.displayHackersDetail();
+        Assertions.assertTrue(true);
+    }
+
+    @Test
+    public void test_canRegisterHacker() throws HackerException {
+        JuliaCodingChallenge juliaCodingChallenge = new JuliaCodingChallenge();
+        juliaCodingChallenge.registerHacker("Divine", 1, 23);
+//        Assertions.assertNotNull(hackersName);
         Assertions.assertTrue(true);
     }
 }
