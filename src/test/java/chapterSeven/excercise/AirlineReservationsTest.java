@@ -36,8 +36,8 @@ public class AirlineReservationsTest {
     }
 
     @Test
-    public void test_passengerCanGetAReserveSeat(){
-        airlineReservations.assignSeatForFirstClassPassenger("firstClass");
+    public void test_passengerCanGetAReserveSeat() {
+        int isTrue = airlineReservations.assignSeatForFirstClassPassenger("firstClass");
         Assertions.assertTrue(true);
     }
 }
