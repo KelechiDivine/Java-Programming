@@ -6,17 +6,14 @@ public class CountingValley {
 
      /*                 PseudoCode
 
-     * -> Initialize the altitude to default (0)
+     * -> Initialize the seaLevel to default (0)
      * -> Initialize the valley to (0)
-     * -> Then,increment direction toward the hike step
-     * -> Check if the path is U.
-     * -> If the path is equals U, then keep incrementing the altitude
-     * -> If the altitude is still at default, then keep incrementing the valley
-     * -> Else if altitude is not equals U, the decrement the altitude
+     * -> Then,increment motion toward the hike direction
+     * -> If the direction at motion is equals U, incrementing the seaLevel
+     * -> Else, If the direction at motion is equals D decrement the seaLevel, if the seaLevel is at 0, then incrementing the valley.
+     * -> Print the journey information of the hiker
      * -> return the valley.
-
-     */
-
+*/
 
     //    TODO: Create counting valley method
 
@@ -24,12 +21,12 @@ public class CountingValley {
         int seaLevel = 0;
         int valley = 0;
 
-        for (int stillInValley = 0; stillInValley < direction.length(); stillInValley++){
-            if (direction.charAt(stillInValley) == 'U'){
+        for (int motion = 0; motion < direction.length(); motion++){
+            if (direction.charAt(motion) == 'U'){
                 seaLevel ++;
             }
             else{
-                if (direction.charAt(stillInValley) == 'D'){
+                if (direction.charAt(motion) == 'D'){
                     if (seaLevel == 0){
                         valley++;
                     }
