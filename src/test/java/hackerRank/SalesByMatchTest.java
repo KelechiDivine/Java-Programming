@@ -21,7 +21,7 @@ public class SalesByMatchTest {
     @Test
     public void test_canPairAndCountSocks(){
         SalesByMatch salesByMatch = new SalesByMatch();
-        int newSocks = salesByMatch.sockMerchant(9, new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20});
-        Assertions.assertEquals(3, newSocks, "No socks was paired.");
+        int newSocksVariable = salesByMatch.sockMerchant(9, new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20});
+        Assertions.assertEquals(3, newSocksVariable, "No socks was paired.");
     }
 }
