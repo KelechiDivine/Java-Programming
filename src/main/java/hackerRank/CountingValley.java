@@ -2,7 +2,7 @@ package hackerRank;
 
 public class CountingValley {
 
-    /* The goal is to count the number of valleys a hiker goes though: */
+    /* The goal is to count the number of valleys a hiker goes though. */
 
      /*                 PseudoCode
 
