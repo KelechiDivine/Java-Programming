@@ -5,8 +5,8 @@ public class Solution {
 	public Solution(){
 		System.out.println("This class is not null...");
 	}
+
 	public int isDiagonal(int[][] arrayOfArray, int nthLengthOfArray){
-		
 		int firstDiagonal  = 0;
 		int secondDiagonal = 0;
 		
