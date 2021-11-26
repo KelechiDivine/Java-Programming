@@ -62,7 +62,7 @@ public class AirlineReservations {
 			for (int hasAReservedFirstClassSeat = 0; hasAReservedFirstClassSeat < 5; hasAReservedFirstClassSeat++){
 				if (!totalNumberOfPassengersSeat[hasAReservedFirstClassSeat])
 					totalNumberOfFirstClassSeat += 1;
-				System.out.println(totalNumberOfFirstClassSeat +=1);
+				System.out.println(totalNumberOfFirstClassSeat += 1);
 			}
 		}
 		return totalNumberOfFirstClassSeat;
