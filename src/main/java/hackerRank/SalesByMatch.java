@@ -15,7 +15,8 @@ public class SalesByMatch {
     * -> If the current item equals to the next item
     * -> Then that's the pair, increment our count variable
     * -> Also increment currentItem to skip the next item
-    * -> return the count value.*/
+    * -> return the count value.
+      */
 
 //    TODO: numberOfSocks : the number (integer) of socks in the pile.
 //    TODO: arrayOfSockColor : an array of the colors (also integer to represent the value of each color) of each sock.
