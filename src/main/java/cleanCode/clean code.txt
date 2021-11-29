@@ -26,9 +26,9 @@ Don't pass boolean in your functions. Make sure your code isn't surprising
 	a: To compensate for our failure to express ourselves in code.
 
 2: Every use of a comment represent a failure.
-	a: So don''t comment first. Try everything else, then 
+	a: So don't comment first. Try everything else, then
 	   comment as a resort
 
 Let all your local variable begin with 'a'(aDate)
-All of the argument to a function begins with a 'var' (varFirstNumber)
+All the argument to a function begins with a 'var' (varFirstNumber)
 All instance variable begin with 'its' (itsBoy)
