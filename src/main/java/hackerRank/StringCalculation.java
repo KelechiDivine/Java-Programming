@@ -23,16 +23,16 @@ public class StringCalculation {
         return newNumber;
     }
 
-    public int addTwoStringNumbers(String firstNumber, String secondNumber){
-        return readFromStringToInt(firstNumber) + readFromStringToInt(secondNumber);
+    public String addTwoStringNumbers(String firstNumber, String secondNumber){
+        return String.valueOf(readFromStringToInt(firstNumber) + readFromStringToInt(secondNumber));
     }
-    public int subtractTwoStringNumbers(String firstNumber, String secondNumber){
-        return readFromStringToInt(firstNumber) - readFromStringToInt(secondNumber);
+    public String subtractTwoStringNumbers(String firstNumber, String secondNumber){
+        return String.valueOf(readFromStringToInt(firstNumber) - readFromStringToInt(secondNumber));
     }
-    public int multiplyTwoStringNumbers(String firstNumber, String secondNumber){
-        return readFromStringToInt(firstNumber) * readFromStringToInt(secondNumber);
+    public String multiplyTwoStringNumbers(String firstNumber, String secondNumber){
+        return String.valueOf(readFromStringToInt(firstNumber) * readFromStringToInt(secondNumber));
     }
-    public int divideTwoStringNumbers(String firstNumber, String secondNumber){
-        return readFromStringToInt(firstNumber) / readFromStringToInt(secondNumber);
+    public String divideTwoStringNumbers(String firstNumber, String secondNumber){
+        return String.valueOf(readFromStringToInt(firstNumber) / readFromStringToInt(secondNumber));
     }
 }
