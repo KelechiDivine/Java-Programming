@@ -7,6 +7,7 @@ public class StringCalculation {
         int newNumber = 0;
         int value = 0;
 
+//        TODO: Let string '0' be equals to integer 0
         for (int indexOf = 0; indexOf < number.length(); indexOf++) {
             if (number.charAt(indexOf) == '0') value = 0;
             if (number.charAt(indexOf) == '1') value = 1;
