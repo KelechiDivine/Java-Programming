@@ -19,8 +19,8 @@ public class AirlineReservationsTest {
 
     @Test
     public void test_passengerCanReceiveWelcomeMessage(){
-        String hasMessage = airlineReservations.sendWelcomeMessageToCustomers();
-        Assertions.assertNotNull(hasMessage);
+        String messageVariable = airlineReservations.sendWelcomeMessageToCustomers();
+        Assertions.assertNotNull(messageVariable);
     }
 
     @Test
@@ -30,7 +30,7 @@ public class AirlineReservationsTest {
     }
 
     @Test
-    public void test_passengerCanBookEconomyFLight(){
+    public void test_passengerCanBookEconomyFlight(){
         boolean value = airlineReservations.createEconomyCustomersSeatReservation("economy");
         Assertions.assertTrue(value);
     }

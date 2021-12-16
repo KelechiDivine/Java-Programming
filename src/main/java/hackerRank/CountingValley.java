@@ -16,7 +16,6 @@ public class CountingValley {
 */
 
     //    TODO: Create counting valley method
-
     public int countingValley(String direction, int step) {
         int seaLevel = 0;
         int valley = 0;
