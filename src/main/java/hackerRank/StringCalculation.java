@@ -25,15 +25,19 @@ public class StringCalculation {
     }
 
     public String addTwoStringNumbers(String firstNumber, String secondNumber){
+        System.out.println(readFromStringToInt(firstNumber) + readFromStringToInt(secondNumber));
         return String.valueOf(readFromStringToInt(firstNumber) + readFromStringToInt(secondNumber));
     }
     public String subtractTwoStringNumbers(String firstNumber, String secondNumber){
+        System.out.println(readFromStringToInt(firstNumber) - readFromStringToInt(secondNumber));
         return String.valueOf(readFromStringToInt(firstNumber) - readFromStringToInt(secondNumber));
     }
     public String multiplyTwoStringNumbers(String firstNumber, String secondNumber){
+        System.out.println(readFromStringToInt(firstNumber) * readFromStringToInt(secondNumber));
         return String.valueOf(readFromStringToInt(firstNumber) * readFromStringToInt(secondNumber));
     }
     public String divideTwoStringNumbers(String firstNumber, String secondNumber){
+        System.out.println(readFromStringToInt(firstNumber) / readFromStringToInt(secondNumber));
         return String.valueOf(readFromStringToInt(firstNumber) / readFromStringToInt(secondNumber));
     }
 }
