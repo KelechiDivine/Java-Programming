@@ -22,7 +22,7 @@ public class CountingValley {
 
         for (int motion = 0; motion < direction.length(); motion++){
             if (direction.charAt(motion) == 'U'){
-                seaLevel ++;
+                seaLevel ++ ;
             }
             else{
                 if (direction.charAt(motion) == 'D'){
