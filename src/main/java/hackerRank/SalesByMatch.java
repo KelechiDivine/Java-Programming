@@ -29,7 +29,7 @@ public class SalesByMatch {
         Arrays.sort(givenArray);
         System.out.println(Arrays.toString(givenArray));
 
-        for (int currentItem = 0; currentItem < numberOfSocks-1; currentItem++){
+        for (int currentItem = 0; currentItem < numberOfSocks - 1; currentItem++){
             if (givenArray[currentItem] == givenArray[currentItem + 1]){
                 count++;
                 currentItem += 1;
