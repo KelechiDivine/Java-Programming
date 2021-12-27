@@ -22,6 +22,4 @@ public class Solutions {
 		System.out.println(Arrays.toString(counter));
 		return maxSize;
 	}
-	
-	
 }
