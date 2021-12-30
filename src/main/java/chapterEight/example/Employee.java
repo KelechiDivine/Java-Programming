@@ -2,10 +2,10 @@ package chapterEight.example;
 
 public class Employee {
 
-    private String firstName;
-    private String lastName;
-    private Date birthDate;
-    private Date hireDate;
+    private final String firstName;
+    private final String lastName;
+    private final Date birthDate;
+    private final Date hireDate;
 
     public Employee(String firstName, String lastName, Date birthDate, Date hireDate) {
         this.firstName = firstName;
