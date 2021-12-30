@@ -4,18 +4,6 @@ import java.util.Arrays;
 
 public class SalesByMatch {
 
-    /* The goal is to count the numbers of how many pairs of socks. This also gives info that the final result should be an integer. */
-
-    /*                  PseudoCode
-    * -> Need to initiate a count variable to count pairs and return the value.
-    * -> Sort the given array
-    * -> Loop through the sorted array
-    * -> If the current item equals to the next item
-    * -> Then that's the pair, increment our count variable
-    * -> Also increment currentItem to skip the next item
-    * -> return the count value.
-      */
-
 //    TODO: numberOfSocks : the number (integer) of socks in the pile.
 //    TODO: givenArray : an array of the colors (also integer to represent the value of each color) of each sock.
 

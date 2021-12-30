@@ -57,4 +57,6 @@ public class ValueInBst {
             throw new IllegalArgumentException("The left node can't be greater than the right node.");
         }
     }
+
+//    By taking the difference of target and number i.e. target – number or number – target. A negative or positive difference will indicate the direction to move ( left or right). For this program, we are not worrying about the nature of difference so we will use absolute value. We can use Maths.abs() here.
 }
