@@ -1,7 +1,5 @@
 package chapterEight.example;
 
-import java.util.SimpleTimeZone;
-
 public class ThisTest {
     public static void main(String[] args) {
         SimpleTime time = new SimpleTime(15, 30, 19);
@@ -10,9 +8,9 @@ public class ThisTest {
 }
 
 class SimpleTime{
-    private int hour;
-    private int minute;
-    private int second;
+    private final int hour;
+    private final int minute;
+    private final int second;
 
     public SimpleTime(int hour, int minute, int second){
         this.hour = hour;
@@ -25,4 +23,7 @@ class SimpleTime{
                 "toUniversalString()", toUniversalString());
     }
 
+    public String toUniversalString(){
+        return String.format("%02d:%02d:%02d",this.hour, this.minute, this.second);
+    }
 }
