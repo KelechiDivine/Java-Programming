@@ -1,6 +1,6 @@
 package chapterEight.example;
 
-class PackageData {
+public class PackageData {
     int number;
     String string;
 

@@ -1,6 +1,6 @@
 package chapterEight.example;
 
-class SimpleTime {
+public class SimpleTime {
     private final int hour;
     private final int minute;
     private final int second;
