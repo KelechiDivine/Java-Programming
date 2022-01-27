@@ -1,0 +1,7 @@
+A class can have only a single constructor with a given signature.
+
+Different between constructor and static methods -->
+
+1: Unlike constructors, they have names
+2: Unlike constructors, they are not required to create a new object each time they're
+    invoked.
