@@ -14,3 +14,8 @@ Different between constructor and static methods -->
 
 5: A fifth advantage of static factories is that class of the returned object need not
     exist when the class containing the method is written.
+
+6: The main limitation of providing only static factory methods is that classes without
+    pubic or protected constructor cannot be subclassed.
+
+7: A second shortcoming of static factory method is that they are hard for programmers to find.
