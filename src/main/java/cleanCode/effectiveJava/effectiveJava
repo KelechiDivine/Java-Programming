@@ -2,9 +2,15 @@ A class can have only a single constructor with a given signature.
 
 Different between constructor and static methods -->
 
-1: Unlike constructors, they have names
+1: Unlike constructors, they have names.
+
 2: Unlike constructors, they are not required to create a new object each time they're
     invoked.
+
 3: Unlike constructors, they can return an object of any subtype f their return type.
-4: A fourth advantage of static factories is that the class of the
-returned object can vary from call to call as a function of the input parameters.
+
+4: A fourth advantage of static factories is that the class of the returned object
+    can vary from call to call as a function of the input parameters.
+
+5: A fifth advantage of static factories is that class of the returned object need not
+    exist when the class containing the method is written.
