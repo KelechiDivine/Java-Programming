@@ -1,6 +1,6 @@
 package chapterFour.exercises;
 
-public class Ac {
+public class AirConditional {
 
     public int acIsOn(String controlSwitch) {
         if (controlSwitch.equals("on") || controlSwitch.equals("ON"))
