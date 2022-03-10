@@ -27,9 +27,8 @@ public class AirConditionalTest {
 
     @Test
     public void test_changeAcTemperature(){
-        int temperatureVariable = airConditional.acTemperature(22);
-        Assertions.assertEquals(temperatureVariable, 22);
+        int temperatureVariable = airConditional.acTemperature(17);
+        Assertions.assertEquals(temperatureVariable, 17);
 
     }
-
 }
